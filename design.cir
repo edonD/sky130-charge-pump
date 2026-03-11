@@ -21,12 +21,12 @@ Vclk2 clk2 0 PULSE(0 1.8 'thalf' 'trise' 'trise' 'thalf-trise' 'tper')
 
 * === Stage 1: Cross-coupled Pelliconi cell (Vdd -> ~2*Vdd) ===
 * NMOS pair: charges a1/b1 from Vdd when cross node is boosted
-XMN1 a1 b1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn1}u L={Ln1}u nf={NF1}
-XMN2 b1 a1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn1}u L={Ln1}u nf={NF1}
+XMN1 a1 b1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn1}u L={Ln1}u nf=1
+XMN2 b1 a1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn1}u L={Ln1}u nf=1
 
 * PMOS pair: transfers boosted charge to mid rail
-XMP1 mid b1 a1 mid sky130_fd_pr__pfet_g5v0d10v5 W={Wp1}u L={Lp1}u nf={NF1}
-XMP2 mid a1 b1 mid sky130_fd_pr__pfet_g5v0d10v5 W={Wp1}u L={Lp1}u nf={NF1}
+XMP1 mid b1 a1 mid sky130_fd_pr__pfet_g5v0d10v5 W={Wp1}u L={Lp1}u nf=1
+XMP2 mid a1 b1 mid sky130_fd_pr__pfet_g5v0d10v5 W={Wp1}u L={Lp1}u nf=1
 
 * Stage 1 flying caps
 C1a a1 clk1 {Cfly1}p
@@ -36,11 +36,11 @@ C1b b1 clk2 {Cfly1}p
 Cmid mid 0 {Cmid}p
 
 * === Stage 2: Cross-coupled Pelliconi cell (~2*Vdd -> ~3*Vdd) ===
-XMN3 a2 b2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn2}u L={Ln2}u nf={NF2}
-XMN4 b2 a2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn2}u L={Ln2}u nf={NF2}
+XMN3 a2 b2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn2}u L={Ln2}u nf=1
+XMN4 b2 a2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn2}u L={Ln2}u nf=1
 
-XMP3 vout b2 a2 vout sky130_fd_pr__pfet_g5v0d10v5 W={Wp2}u L={Lp2}u nf={NF2}
-XMP4 vout a2 b2 vout sky130_fd_pr__pfet_g5v0d10v5 W={Wp2}u L={Lp2}u nf={NF2}
+XMP3 vout b2 a2 vout sky130_fd_pr__pfet_g5v0d10v5 W={Wp2}u L={Lp2}u nf=1
+XMP4 vout a2 b2 vout sky130_fd_pr__pfet_g5v0d10v5 W={Wp2}u L={Lp2}u nf=1
 
 * Stage 2 flying caps
 C2a a2 clk1 {Cfly2}p
@@ -56,16 +56,16 @@ Rload vout 0 {Rload}
 
 * === Measurements ===
 .control
-* Transient — 20us for steady state
-tran 0.5n 20u uic
+* Transient — 30us for steady state with larger caps
+tran 1n 30u uic
 
 * Measure output voltage in steady state (last 5us)
-meas tran vout_avg avg v(vout) from=15u to=20u
+meas tran vout_avg avg v(vout) from=25u to=30u
 echo "RESULT_VOUT_V" $&vout_avg
 
 * Output ripple
-meas tran vout_max max v(vout) from=15u to=20u
-meas tran vout_min min v(vout) from=15u to=20u
+meas tran vout_max max v(vout) from=25u to=30u
+meas tran vout_min min v(vout) from=25u to=30u
 let ripple = (vout_max - vout_min) * 1000
 echo "RESULT_RIPPLE_MV" $&ripple
 
@@ -76,11 +76,11 @@ echo "RESULT_IOUT_MA" $&iout_ma
 
 * Input power — measure instantaneous V*I for each source, then average
 let pvdd = v(vdd) * i(Vdd)
-meas tran avg_pvdd avg pvdd from=15u to=20u
+meas tran avg_pvdd avg pvdd from=25u to=30u
 let pclk1 = v(clk1) * i(Vclk1)
-meas tran avg_pclk1 avg pclk1 from=15u to=20u
+meas tran avg_pclk1 avg pclk1 from=25u to=30u
 let pclk2 = v(clk2) * i(Vclk2)
-meas tran avg_pclk2 avg pclk2 from=15u to=20u
+meas tran avg_pclk2 avg pclk2 from=25u to=30u
 let pin = abs(avg_pvdd) + abs(avg_pclk1) + abs(avg_pclk2)
 let pout = vout_avg * iout
 let eff = pout / pin * 100
