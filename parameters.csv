@@ -1,0 +1,10 @@
+name,min,max,scale
+Wn,1,200,log
+Ln,0.15,2,log
+Wout,1,200,log
+Lout,0.5,5,log
+Cfly,1,100,log
+Cout,10,100,log
+Rload,500,10000,log
+Thalf,5,500,log
+Tperiod,10,1000,log

@@ -1,0 +1,37 @@
+{
+  "name": "SKY130 Charge Pump Voltage Doubler",
+  "supply_v": 1.8,
+  "supply_type": "single",
+  "measurements": {
+    "vout_v": {
+      "target": ">3.0",
+      "weight": 25,
+      "unit": "V",
+      "description": "Output voltage at rated load current"
+    },
+    "iout_ma": {
+      "target": ">1",
+      "weight": 20,
+      "unit": "mA",
+      "description": "Maximum output current with Vout > 3.0V"
+    },
+    "efficiency_pct": {
+      "target": ">50",
+      "weight": 20,
+      "unit": "%",
+      "description": "Power efficiency (Pout/Pin)"
+    },
+    "ripple_mv": {
+      "target": "<100",
+      "weight": 20,
+      "unit": "mV",
+      "description": "Peak-to-peak output voltage ripple at rated load"
+    },
+    "startup_us": {
+      "target": "<50",
+      "weight": 15,
+      "unit": "us",
+      "description": "Time to reach 90% of final output voltage"
+    }
+  }
+}

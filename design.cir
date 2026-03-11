@@ -1,0 +1,70 @@
+* SKY130 Cross-Coupled Voltage Doubler — Starter Topology
+* Two-phase clock, cross-coupled NMOS, 5V-tolerant output devices
+
+.lib "sky130_models/sky130.lib.spice" tt
+
+* Supply
+Vdd vdd 0 1.8
+Vss vss 0 0
+
+* Two-phase non-overlapping clocks
+Vclk1 clk1 0 PULSE(0 1.8 0 0.1n 0.1n {Thalf}n {Tperiod}n)
+Vclk2 clk2 0 PULSE(0 1.8 {Thalf}n 0.1n 0.1n {Thalf}n {Tperiod}n)
+
+* === Flying capacitors (pumped by clocks) ===
+Cf1 na clk1 {Cfly}p
+Cf2 nb clk2 {Cfly}p
+
+* === Cross-coupled NMOS charge transfer (1.8V devices for input side) ===
+XMn1 na nb vdd vdd sky130_fd_pr__nfet_01v8 W={Wn}u L={Ln}u nf=1
+XMn2 nb na vdd vdd sky130_fd_pr__nfet_01v8 W={Wn}u L={Ln}u nf=1
+
+* === Output rectifier (5V-tolerant devices — output exceeds 1.8V) ===
+XMp1 vout na na vdd sky130_fd_pr__pfet_g5v0d10v5 W={Wout}u L={Lout}u nf=1
+XMp2 vout nb nb vdd sky130_fd_pr__pfet_g5v0d10v5 W={Wout}u L={Lout}u nf=1
+
+* === Output filter cap ===
+Cout vout vss {Cout}p
+
+* === Load ===
+Rload vout vss {Rload}
+
+.options reltol=0.003 method=gear
+
+* === Measurements ===
+.control
+* Transient — run long enough to reach steady state
+tran 0.1n 10u
+
+* Measure output voltage in steady state (last 1us)
+meas tran vout_avg avg v(vout) from=9u to=10u
+echo "RESULT_VOUT_V" $&vout_avg
+
+* Output ripple
+meas tran vout_max max v(vout) from=9u to=10u
+meas tran vout_min min v(vout) from=9u to=10u
+let ripple = (vout_max - vout_min) * 1000
+echo "RESULT_RIPPLE_MV" $&ripple
+
+* Output current
+let iout = vout_avg / {Rload}
+let iout_ma = iout * 1000
+echo "RESULT_IOUT_MA" $&iout_ma
+
+* Input power
+meas tran avg_idd avg i(Vdd) from=9u to=10u
+let pin = abs(avg_idd) * 1.8
+let pout = vout_avg * iout
+let eff = pout / pin * 100
+echo "RESULT_EFFICIENCY_PCT" $&eff
+
+* Startup time (90% of final value)
+let target90 = vout_avg * 0.9
+meas tran startup_t when v(vout)=target90 rise=1
+let startup_us = startup_t * 1e6
+echo "RESULT_STARTUP_US" $&startup_us
+
+echo "RESULT_DONE"
+.endc
+
+.end
