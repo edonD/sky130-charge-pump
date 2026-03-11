@@ -4,4 +4,4 @@ Ld,0.5,10,log
 Cfly,10,100,log
 Cout,10,100,log
 Rload,500,10000,log
-Thalf,5,250,log
+Thalf,10,250,log

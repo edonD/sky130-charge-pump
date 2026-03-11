@@ -47,16 +47,16 @@ Rload vout 0 {Rload}
 
 * === Measurements ===
 .control
-* Transient — 50us for steady state
-tran 1n 50u
+* Transient — 30us for steady state
+tran 2n 30u
 
 * Measure output voltage in steady state (last 5us)
-meas tran vout_avg avg v(vout) from=45u to=50u
+meas tran vout_avg avg v(vout) from=25u to=30u
 echo "RESULT_VOUT_V" $&vout_avg
 
 * Output ripple
-meas tran vout_max max v(vout) from=45u to=50u
-meas tran vout_min min v(vout) from=45u to=50u
+meas tran vout_max max v(vout) from=25u to=30u
+meas tran vout_min min v(vout) from=25u to=30u
 let ripple = (vout_max - vout_min) * 1000
 echo "RESULT_RIPPLE_MV" $&ripple
 
@@ -66,7 +66,7 @@ let iout_ma = iout * 1000
 echo "RESULT_IOUT_MA" $&iout_ma
 
 * Input power
-meas tran avg_idd avg i(Vdd) from=45u to=50u
+meas tran avg_idd avg i(Vdd) from=25u to=30u
 let pin = abs(avg_idd) * 1.8
 let pout = vout_avg * iout
 let eff = pout / pin * 100
