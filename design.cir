@@ -1,5 +1,6 @@
-* SKY130 Cross-Coupled Voltage Doubler — Proper Topology
-* Two-phase clock, all 5V-tolerant devices, cross-coupled NMOS+PMOS
+* SKY130 3-Stage Dickson Charge Pump
+* 5V NMOS diodes (body=0 for proper junction bias), 3 flying caps
+* Overcomes Vth body-effect with extra stages
 
 .lib "sky130_models/sky130.lib.spice" tt
 
@@ -15,34 +16,39 @@ Vss vss 0 0
 Vclk1 clk1 0 PULSE(0 1.8 0 0.1n 0.1n 'thalf_val*1e-9' 'tperiod_val*1e-9')
 Vclk2 clk2 0 PULSE(0 1.8 'thalf_val*1e-9' 0.1n 0.1n 'thalf_val*1e-9' 'tperiod_val*1e-9')
 
-* === Flying capacitors (pumped by clocks) ===
-Cf1 na clk1 {Cfly}p
-Cf2 nb clk2 {Cfly}p
+* === Stage 0: Input diode VDD -> n1 ===
+XD1 vdd vdd n1 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wd}u L={Ld}u nf=5
 
-* === Cross-coupled NMOS charge transfer (5V-tolerant — drain sees up to 2*VDD) ===
-* MN1: when nb is high (boosted to 2*VDD), MN1 turns on, charges na to VDD
-* MN2: when na is high (boosted to 2*VDD), MN2 turns on, charges nb to VDD
-XMn1 na nb vdd vdd sky130_fd_pr__nfet_g5v0d10v5 W={Wn}u L={Ln}u nf=1
-XMn2 nb na vdd vdd sky130_fd_pr__nfet_g5v0d10v5 W={Wn}u L={Ln}u nf=1
+* Stage 1 flying cap (clk1)
+C1 n1 clk1 {Cfly}p
 
-* === Cross-coupled PMOS output switches (5V-tolerant) ===
-* MP1: source=na, gate=nb, drain=vout — ON when na is boosted, nb is low
-* MP2: source=nb, gate=na, drain=vout — ON when nb is boosted, na is low
-XMp1 vout nb na na sky130_fd_pr__pfet_g5v0d10v5 W={Wp}u L={Lp}u nf=1
-XMp2 vout na nb nb sky130_fd_pr__pfet_g5v0d10v5 W={Wp}u L={Lp}u nf=1
+* === Stage 1: Transfer diode n1 -> n2 ===
+XD2 n1 n1 n2 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wd}u L={Ld}u nf=5
+
+* Stage 2 flying cap (clk2)
+C2 n2 clk2 {Cfly}p
+
+* === Stage 2: Transfer diode n2 -> n3 ===
+XD3 n2 n2 n3 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wd}u L={Ld}u nf=5
+
+* Stage 3 flying cap (clk1)
+C3 n3 clk1 {Cfly}p
+
+* === Stage 3: Output diode n3 -> vout ===
+XD4 n3 n3 vout 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wd}u L={Ld}u nf=5
 
 * === Output filter cap ===
-Cout vout vss {Cout}p
+Cout vout 0 {Cout}p
 
 * === Load ===
-Rload vout vss {Rload}
+Rload vout 0 {Rload}
 
 .options reltol=0.003 method=gear
 
 * === Measurements ===
 .control
-* Transient — run long enough for steady state (50us)
-tran 0.5n 50u
+* Transient — 50us for steady state
+tran 1n 50u
 
 * Measure output voltage in steady state (last 5us)
 meas tran vout_avg avg v(vout) from=45u to=50u

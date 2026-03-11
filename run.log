@@ -1,0 +1,16 @@
+Loading design...
+Design: SKY130 Charge Pump Voltage Doubler
+Parameters: 8
+Specs: 5
+
+DE: 8 params, pop=30, patience=10, workers=32
+[DE] iter    1 | best: 1.000000e+06 | no_improve:   0 | div: 0.2885 | dt: 120.071s
+[DE] iter    2 | best: 1.000000e+06 | no_improve:   1 | div: 0.2885 | dt: 120.074s
+[DE] iter    3 | best: 1.000000e+06 | no_improve:   2 | div: 0.2885 | dt: 120.075s
+[DE] iter    4 | best: 1.000000e+06 | no_improve:   3 | div: 0.2885 | dt: 120.071s
+[DE] iter    5 | best: 1.000000e+06 | no_improve:   4 | div: 0.2885 | dt: 120.071s
+[DE] iter    6 | best: 1.000000e+06 | no_improve:   5 | div: 0.2885 | dt: 120.076s
+[DE] iter    7 | best: 1.000000e+06 | no_improve:   6 | div: 0.2885 | dt: 120.075s
+[DE] iter    8 | best: 1.000000e+06 | no_improve:   7 | div: 0.2885 | dt: 120.072s
+[DE] iter    9 | best: 1.000000e+06 | no_improve:   8 | div: 0.2885 | dt: 120.069s
+[DE] iter   10 | best: 1.000000e+06 | no_improve:   9 | div: 0.2885 | dt: 120.074s

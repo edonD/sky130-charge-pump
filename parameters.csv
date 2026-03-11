@@ -1,9 +1,7 @@
 name,min,max,scale
-Wn,1,500,log
-Ln,0.5,10,log
-Wp,1,500,log
-Lp,0.5,10,log
-Cfly,1,100,log
+Wd,5,99,log
+Ld,0.5,10,log
+Cfly,10,100,log
 Cout,10,100,log
 Rload,500,10000,log
-Thalf,5,500,log
+Thalf,5,250,log
