@@ -56,16 +56,16 @@ Rload vout 0 {Rload}
 
 * === Measurements ===
 .control
-* Transient — 30us for steady state with larger caps
-tran 1n 30u uic
+* Transient — 50us for steady state
+tran 1n 50u uic
 
-* Measure output voltage in steady state (last 5us)
-meas tran vout_avg avg v(vout) from=25u to=30u
+* Measure output voltage in steady state (last 10us)
+meas tran vout_avg avg v(vout) from=40u to=50u
 echo "RESULT_VOUT_V" $&vout_avg
 
 * Output ripple
-meas tran vout_max max v(vout) from=25u to=30u
-meas tran vout_min min v(vout) from=25u to=30u
+meas tran vout_max max v(vout) from=40u to=50u
+meas tran vout_min min v(vout) from=40u to=50u
 let ripple = (vout_max - vout_min) * 1000
 echo "RESULT_RIPPLE_MV" $&ripple
 
@@ -76,11 +76,11 @@ echo "RESULT_IOUT_MA" $&iout_ma
 
 * Input power — measure instantaneous V*I for each source, then average
 let pvdd = v(vdd) * i(Vdd)
-meas tran avg_pvdd avg pvdd from=25u to=30u
+meas tran avg_pvdd avg pvdd from=40u to=50u
 let pclk1 = v(clk1) * i(Vclk1)
-meas tran avg_pclk1 avg pclk1 from=25u to=30u
+meas tran avg_pclk1 avg pclk1 from=40u to=50u
 let pclk2 = v(clk2) * i(Vclk2)
-meas tran avg_pclk2 avg pclk2 from=25u to=30u
+meas tran avg_pclk2 avg pclk2 from=40u to=50u
 let pin = abs(avg_pvdd) + abs(avg_pclk1) + abs(avg_pclk2)
 let pout = vout_avg * iout
 let eff = pout / pin * 100

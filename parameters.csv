@@ -7,9 +7,9 @@ Wn2,5,100,log
 Ln2,0.5,5,log
 Wp2,10,200,log
 Lp2,0.5,5,log
-Cfly1,50,500,log
-Cfly2,50,500,log
-Cmid,20,500,log
-Cout,50,500,log
+Cfly1,20,200,log
+Cfly2,20,200,log
+Cmid,20,200,log
+Cout,20,200,log
 Rload,2000,5000,log
-Freq,5,50,log
+Freq,10,50,log
