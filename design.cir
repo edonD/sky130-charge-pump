@@ -1,6 +1,6 @@
-* SKY130 3-Stage Dickson Charge Pump
-* 5V NMOS diodes (body=0 for proper junction bias), 3 flying caps
-* Overcomes Vth body-effect with extra stages
+* SKY130 2-Stage Pelliconi Cross-Coupled Charge Pump
+* Eliminates Vth drops via cross-coupled NMOS/PMOS pairs
+* All devices 5V-tolerant (g5v0d10v5)
 
 .lib "sky130_models/sky130.lib.spice" tt
 
@@ -16,47 +16,59 @@ Vss vss 0 0
 Vclk1 clk1 0 PULSE(0 1.8 0 0.1n 0.1n 'thalf_val*1e-9' 'tperiod_val*1e-9')
 Vclk2 clk2 0 PULSE(0 1.8 'thalf_val*1e-9' 0.1n 0.1n 'thalf_val*1e-9' 'tperiod_val*1e-9')
 
-* === Stage 0: Input diode VDD -> n1 ===
-XD1 vdd vdd n1 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wd}u L={Ld}u nf=5
+* === Stage 1: Pelliconi cell (Vdd -> ~2*Vdd) ===
+* NMOS cross-coupled pair (input charging)
+* When k1 is boosted high, MN1 turns on charging j1 from Vdd
+* When j1 is boosted high, MN2 turns on charging k1 from Vdd
+XMN1 j1 k1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn}u L={Ln}u nf=1
+XMN2 k1 j1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn}u L={Ln}u nf=1
 
-* Stage 1 flying cap (clk1)
-C1 n1 clk1 {Cfly}p
+* PMOS cross-coupled pair (output transfer)
+* When k1 is low, MP1 passes boosted j1 to mid
+* When j1 is low, MP2 passes boosted k1 to mid
+XMP1 mid k1 j1 mid sky130_fd_pr__pfet_g5v0d10v5 W={Wp}u L={Lp}u nf=1
+XMP2 mid j1 k1 mid sky130_fd_pr__pfet_g5v0d10v5 W={Wp}u L={Lp}u nf=1
 
-* === Stage 1: Transfer diode n1 -> n2 ===
-XD2 n1 n1 n2 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wd}u L={Ld}u nf=5
+* Stage 1 flying capacitors
+C1a j1 clk1 {Cfly}p
+C1b k1 clk2 {Cfly}p
 
-* Stage 2 flying cap (clk2)
-C2 n2 clk2 {Cfly}p
+* Interstage decoupling capacitor
+Cmid mid 0 {Cmid}p
 
-* === Stage 2: Transfer diode n2 -> n3 ===
-XD3 n2 n2 n3 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wd}u L={Ld}u nf=5
+* === Stage 2: Pelliconi cell (~2*Vdd -> ~3*Vdd) ===
+* NMOS cross-coupled pair
+XMN3 j2 k2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn}u L={Ln}u nf=1
+XMN4 k2 j2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn}u L={Ln}u nf=1
 
-* Stage 3 flying cap (clk1)
-C3 n3 clk1 {Cfly}p
+* PMOS cross-coupled pair
+XMP3 vout k2 j2 vout sky130_fd_pr__pfet_g5v0d10v5 W={Wp}u L={Lp}u nf=1
+XMP4 vout j2 k2 vout sky130_fd_pr__pfet_g5v0d10v5 W={Wp}u L={Lp}u nf=1
 
-* === Stage 3: Output diode n3 -> vout ===
-XD4 n3 n3 vout 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wd}u L={Ld}u nf=5
+* Stage 2 flying capacitors
+C2a j2 clk1 {Cfly}p
+C2b k2 clk2 {Cfly}p
 
-* === Output filter cap ===
+* === Output capacitor ===
 Cout vout 0 {Cout}p
 
-* === Load ===
+* === Load resistor ===
 Rload vout 0 {Rload}
 
 .options reltol=0.003 method=gear
 
 * === Measurements ===
 .control
-* Transient — 30us for steady state
-tran 2n 30u
+* Transient — 50us for steady state with 2 stages
+tran 1n 50u
 
-* Measure output voltage in steady state (last 5us)
-meas tran vout_avg avg v(vout) from=25u to=30u
+* Measure output voltage in steady state (last 10us)
+meas tran vout_avg avg v(vout) from=40u to=50u
 echo "RESULT_VOUT_V" $&vout_avg
 
 * Output ripple
-meas tran vout_max max v(vout) from=25u to=30u
-meas tran vout_min min v(vout) from=25u to=30u
+meas tran vout_max max v(vout) from=40u to=50u
+meas tran vout_min min v(vout) from=40u to=50u
 let ripple = (vout_max - vout_min) * 1000
 echo "RESULT_RIPPLE_MV" $&ripple
 
@@ -66,7 +78,7 @@ let iout_ma = iout * 1000
 echo "RESULT_IOUT_MA" $&iout_ma
 
 * Input power
-meas tran avg_idd avg i(Vdd) from=25u to=30u
+meas tran avg_idd avg i(Vdd) from=40u to=50u
 let pin = abs(avg_idd) * 1.8
 let pout = vout_avg * iout
 let eff = pout / pin * 100
