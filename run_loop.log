@@ -48,3 +48,9 @@ Last old background task notification (the failed 8-worker local optimize run). 
 Claude exited with code 0 at Thu Mar 12 03:10:53 UTC 2026
 
 === ITERATION 4 — Thu Mar 12 03:10:59 UTC 2026 ===
+
+
+That's the notification for the DE run we already processed. Iteration 4 is fully complete — results committed and pushed at `49c77b0`.
+Claude exited with code 0 at Thu Mar 12 05:44:46 UTC 2026
+
+=== ITERATION 5 — Thu Mar 12 05:44:51 UTC 2026 ===
