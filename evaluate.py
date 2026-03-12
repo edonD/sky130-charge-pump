@@ -310,12 +310,21 @@ def _seed_to_normalized(seed_dict: Dict[str, float], de_params: Dict) -> Optiona
     return normed
 
 
-# Known best parameters from iteration 5 (Vout=4.49V, Eff=83.5%)
-SEED_PARAMS = {
+# Known best parameters from iteration 5 (Vout=4.49V, Eff=83.5%, MaxIout=3.22mA)
+SEED_PARAMS_ITER5 = {
     'Cfly1': 135.2, 'Cfly2': 125.2, 'Cmid': 14.2, 'Cout': 285.5,
     'Freq': 60.0, 'Ln1': 0.59, 'Ln2': 0.5, 'Lp1': 0.5, 'Lp2': 0.5,
     'Rload': 2937.0, 'Wn1': 73.8, 'Wn2': 85.0, 'Wp1': 88.4, 'Wp2': 94.9,
 }
+
+# Best parameters from iteration 8 (Vout=3.74V, Eff=69.7%)
+SEED_PARAMS_ITER8 = {
+    'Cfly1': 94.6, 'Cfly2': 181.0, 'Cmid': 14.7, 'Cout': 242.3,
+    'Freq': 47.2, 'Ln1': 0.52, 'Ln2': 0.58, 'Lp1': 0.71, 'Lp2': 4.24,
+    'Rload': 3379.3, 'Wn1': 58.2, 'Wn2': 88.2, 'Wp1': 73.3, 'Wp2': 15.4,
+}
+
+SEED_LIST = [SEED_PARAMS_ITER5, SEED_PARAMS_ITER8]
 
 
 def run_de(template: str, params: List[Dict], specs: Dict,
@@ -336,9 +345,9 @@ def run_de(template: str, params: List[Dict], specs: Dict,
 
     n_params = len(params)
     pop_size = max(100, 5 * n_params) if not quick else max(50, 3 * n_params)
-    patience = 15 if not quick else 10
-    min_iter = 15 if not quick else 8
-    max_iter = 50 if not quick else 30
+    patience = 20 if not quick else 10
+    min_iter = 20 if not quick else 8
+    max_iter = 60 if not quick else 30
 
     if not n_workers:
         n_workers = os.cpu_count() or 8
@@ -366,25 +375,32 @@ def run_de(template: str, params: List[Dict], specs: Dict,
         opt_dir="min",
         min_iterations=min_iter,
         max_iterations=max_iter,
-        metric_threshold=-3.5,
+        metric_threshold=-5.0,
         patience=patience,
         F1=0.7, F2=0.3, F3=0.1, CR=0.9,
     )
 
-    # Seed the initial population with known-good parameters
-    # Override _init_population to inject seeds
+    # Seed the initial population with multiple known-good parameter sets
     original_init = de._init_population
     def seeded_init():
         original_init()
-        seed_normed = _seed_to_normalized(SEED_PARAMS, de_params)
-        if seed_normed is not None:
-            # Replace first few population members with seed + perturbations
-            de.trials_normed[0] = seed_normed
-            # Add slightly perturbed versions to explore nearby
-            for i in range(1, min(20, pop_size)):
+        idx = 0
+        for seed_params in SEED_LIST:
+            seed_normed = _seed_to_normalized(seed_params, de_params)
+            if seed_normed is None:
+                continue
+            # Exact copy
+            de.trials_normed[idx] = seed_normed
+            idx += 1
+            # Perturbations around this seed
+            n_perturb = 15
+            for _ in range(n_perturb):
+                if idx >= pop_size:
+                    break
                 perturbed = seed_normed + np.random.randn(n_params) * 0.05
-                de.trials_normed[i] = np.clip(perturbed, 0.0, 1.0)
-            print(f"  Seeded {min(20, pop_size)} population members from known-best params")
+                de.trials_normed[idx] = np.clip(perturbed, 0.0, 1.0)
+                idx += 1
+        print(f"  Seeded {idx} population members from {len(SEED_LIST)} known-best param sets")
     de._init_population = seeded_init
 
     return de.run()
