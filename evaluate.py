@@ -220,7 +220,7 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
         if direction == "above":
             if measured >= val1:
                 ratio = measured / max(abs(val1), 1e-12)
-                cost -= weight * min(ratio - 1.0, 1.0) * 10
+                cost -= weight * min(ratio - 1.0, 2.0) * 20
             else:
                 gap = (val1 - measured) / max(abs(val1), 1e-12)
                 cost += weight * gap ** 2 * 500
@@ -228,7 +228,7 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
         elif direction == "below":
             if measured <= val1:
                 ratio = measured / max(abs(val1), 1e-12)
-                cost -= weight * min(1.0 - ratio, 1.0) * 10
+                cost -= weight * min(1.0 - ratio, 1.0) * 20
             else:
                 gap = (measured - val1) / max(abs(val1), 1e-12)
                 cost += weight * gap ** 2 * 500
