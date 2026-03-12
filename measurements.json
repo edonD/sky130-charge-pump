@@ -1,0 +1,78 @@
+{
+  "measurements": {
+    "Doing analysis at TEMP": 27.0,
+    "vout_avg": 3.59216,
+    "RESULT_VOUT_V": 3.59216,
+    "vout_max": 3.59348,
+    "vout_min": 3.58883,
+    "RESULT_RIPPLE_MV": 4.647,
+    "RESULT_IOUT_MA": 1.19344,
+    "avg_pvdd": -0.00213488,
+    "avg_pclk1": -0.00211935,
+    "avg_pclk2": -0.00212291,
+    "RESULT_EFFICIENCY_PCT": 67.2251,
+    "startup_t": 7.38713e-07,
+    "RESULT_STARTUP_US": 0.738713
+  },
+  "score": 1.0,
+  "details": {
+    "vout_v": {
+      "measured": 3.59216,
+      "target": ">3.0",
+      "met": true,
+      "score": 1.0,
+      "unit": "V"
+    },
+    "iout_ma": {
+      "measured": 1.19344,
+      "target": ">1",
+      "met": true,
+      "score": 1.0,
+      "unit": "mA"
+    },
+    "efficiency_pct": {
+      "measured": 67.2251,
+      "target": ">50",
+      "met": true,
+      "score": 1.0,
+      "unit": "%"
+    },
+    "ripple_mv": {
+      "measured": 4.647,
+      "target": "<100",
+      "met": true,
+      "score": 1.0,
+      "unit": "mV"
+    },
+    "startup_us": {
+      "measured": 0.738713,
+      "target": "<50",
+      "met": true,
+      "score": 1.0,
+      "unit": "us"
+    }
+  },
+  "parameters": {
+    "Cfly1": 120.95559108760348,
+    "Cfly2": 195.90041667619383,
+    "Cmid": 36.86194004027334,
+    "Cout": 121.68232471678733,
+    "Freq": 48.913780864697586,
+    "Ln1": 0.5424636157113217,
+    "Ln2": 0.5083669679212959,
+    "Lp1": 0.9202984202157918,
+    "Lp2": 0.5110611085491296,
+    "Rload": 3009.917408930094,
+    "Wn1": 48.78669308068907,
+    "Wn2": 44.63297550991305,
+    "Wp1": 24.361740096776995,
+    "Wp2": 44.635644603674336
+  },
+  "de_result": {
+    "converged": false,
+    "iterations": 50,
+    "diversity": 0.07286673858892298,
+    "stop_reason": "max_iterations",
+    "best_metric": -4.954249276666666
+  }
+}

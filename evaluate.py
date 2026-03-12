@@ -119,7 +119,7 @@ def run_simulation(template: str, param_values: Dict[str, float],
     try:
         result = subprocess.run(
             [NGSPICE, "-b", path],
-            capture_output=True, text=True, timeout=300,
+            capture_output=True, text=True, timeout=60,
             cwd=PROJECT_DIR
         )
         output = result.stdout + result.stderr
