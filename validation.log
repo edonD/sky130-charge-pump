@@ -1,0 +1,46 @@
+============================================================
+CHARGE PUMP VALIDATION
+============================================================
+
+1. Steady-state verification...
+   Vout = 4.347 V
+   Ripple = 24.55 mV
+   Iout = 1.242 mA
+   Efficiency = 80.9 %
+   Startup = 0.870 us
+
+2. Generating waveform plots...
+   startup.png saved
+   ripple.png saved
+
+3. Load regulation sweep...
+   Rload=10000  Vout=5.012V  Iout=0.501mA  Eff=92.8%
+   Rload= 7000  Vout=4.856V  Iout=0.694mA  Eff=90.2%
+   Rload= 5000  Vout=4.650V  Iout=0.930mA  Eff=86.6%
+   Rload= 4000  Vout=4.470V  Iout=1.117mA  Eff=83.1%
+   Rload= 3500  Vout=4.347V  Iout=1.242mA  Eff=80.9%
+   Rload= 3000  Vout=4.187V  Iout=1.396mA  Eff=78.0%
+   Rload= 2500  Vout=3.977V  Iout=1.591mA  Eff=74.2%
+   Rload= 2000  Vout=3.692V  Iout=1.846mA  Eff=69.0%
+   Rload= 1500  Vout=3.289V  Iout=2.193mA  Eff=61.6%
+   Rload= 1200  Vout=2.946V  Iout=2.455mA  Eff=55.4%
+   Rload= 1000  Vout=2.654V  Iout=2.654mA  Eff=50.2%
+   Rload=  800  Vout=2.300V  Iout=2.875mA  Eff=43.7%
+   vout_vs_iload.png saved
+   efficiency.png saved
+
+4. Generating progress plot...
+   progress.png saved
+
+============================================================
+VALIDATION SUMMARY
+============================================================
+  Vout (V)                  4.347      >3.0  [PASS]
+  Iout (mA)                 1.242      >1.0  [PASS]
+  Efficiency (%)           80.915       >50  [PASS]
+  Ripple (mV)              24.553      <100  [PASS]
+  Startup (us)              0.870       <50  [PASS]
+
+  Max Iout @ Vout>3V: 2.19 mA
+  All specs: PASS
+============================================================

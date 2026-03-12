@@ -1,21 +1,41 @@
 {
   "measurements": {
-    "RESULT_VOUT_V": 4.34457,
-    "RESULT_RIPPLE_MV": 24.351,
-    "RESULT_IOUT_MA": 1.2413,
-    "RESULT_EFFICIENCY_PCT": 80.7565,
-    "RESULT_STARTUP_US": 0.872492
+    "RESULT_VOUT_V": 4.34692,
+    "RESULT_RIPPLE_MV": 24.553,
+    "RESULT_IOUT_MA": 1.24198,
+    "RESULT_EFFICIENCY_PCT": 80.9149,
+    "RESULT_STARTUP_US": 0.870277
   },
   "score": 1.0,
   "details": {
-    "vout_v": {"measured": 4.34457, "target": ">3.0", "met": true, "score": 1.0, "unit": "V"},
-    "iout_ma": {"measured": 1.2413, "target": ">1", "met": true, "score": 1.0, "unit": "mA"},
-    "efficiency_pct": {"measured": 80.7565, "target": ">50", "met": true, "score": 1.0, "unit": "%"},
-    "ripple_mv": {"measured": 24.351, "target": "<100", "met": true, "score": 1.0, "unit": "mV"},
-    "startup_us": {"measured": 0.872492, "target": "<50", "met": true, "score": 1.0, "unit": "us"}
+    "vout_v": {
+      "measured": 4.34692,
+      "met": true,
+      "score": 1.0
+    },
+    "iout_ma": {
+      "measured": 1.24198,
+      "met": true,
+      "score": 1.0
+    },
+    "efficiency_pct": {
+      "measured": 80.9149,
+      "met": true,
+      "score": 1.0
+    },
+    "ripple_mv": {
+      "measured": 24.553,
+      "met": true,
+      "score": 1.0
+    },
+    "startup_us": {
+      "measured": 0.870277,
+      "met": true,
+      "score": 1.0
+    }
   },
   "parameters": {
-    "Cfly1": 158.254120,
+    "Cfly1": 158.25412,
     "Cfly2": 145.809306,
     "Cmid": 28.943975,
     "Cout": 200.0,
@@ -25,14 +45,9 @@
     "Lp1": 0.5,
     "Lp2": 0.5,
     "Rload": 3500.0,
-    "Wn1": 62.680550,
-    "Wn2": 76.632620,
+    "Wn1": 62.68055,
+    "Wn2": 76.63262,
     "Wp1": 50.0,
     "Wp2": 79.519379
-  },
-  "validation": {
-    "settling_error_pct": 0.000023,
-    "simulation_time_us": 100,
-    "load_regulation": "graceful degradation verified from 0.5mA to 2.65mA"
   }
 }

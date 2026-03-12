@@ -153,9 +153,9 @@ def main():
     print(f"Base params: {best_params}")
 
     tmp_dir = tempfile.mkdtemp(prefix="local_opt_")
-    n_workers = 8
-    n_iters = 15
-    pop_size = 40
+    n_workers = 4
+    n_iters = 20
+    pop_size = 20
     current_best = dict(best_params)
     best_score = -1
     best_details = None

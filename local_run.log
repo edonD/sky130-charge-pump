@@ -1,6 +1,48 @@
 Starting local optimization around known-good parameters
-Base params: {'Cfly1': 90.65852454590835, 'Cfly2': 151.5040290051253, 'Cmid': 21.715846182472713, 'Cout': 110.2611804548475, 'Freq': 48.38417668754817, 'Ln1': 0.6575015813946639, 'Ln2': 0.6998581326707901, 'Lp1': 1.4931390714834114, 'Lp2': 0.5, 'Rload': 2442.910171156999, 'Wn1': 54.459248380116485, 'Wn2': 79.29208807672937, 'Wp1': 24.81376815843132, 'Wp2': 38.055445895764834}
-Iter  1 | scale=0.200 | valid=0/40 | best_this=-1000000.0000 | best_overall=-1.0000
-Iter  2 | scale=0.170 | valid=0/40 | best_this=-1000000.0000 | best_overall=-1.0000
-Iter  3 | scale=0.144 | valid=0/40 | best_this=-1000000.0000 | best_overall=-1.0000
-Iter  4 | scale=0.123 | valid=0/40 | best_this=-1000000.0000 | best_overall=-1.0000
+Base params: {'Cfly1': 158.25412, 'Cfly2': 145.809306, 'Cmid': 28.943975, 'Cout': 200.0, 'Freq': 20.205236, 'Ln1': 0.5, 'Ln2': 0.5, 'Lp1': 0.5, 'Lp2': 0.5, 'Rload': 3500.0, 'Wn1': 62.68055, 'Wn2': 76.63262, 'Wp1': 50.0, 'Wp2': 79.519379}
+Iter  1 | scale=0.200 | valid=20/20 | best_this=1.0000 | best_overall=1.0000 *IMPROVED*
+Iter  2 | scale=0.170 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter  3 | scale=0.144 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter  4 | scale=0.123 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter  5 | scale=0.104 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter  6 | scale=0.089 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter  7 | scale=0.075 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter  8 | scale=0.064 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter  9 | scale=0.054 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 10 | scale=0.046 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 11 | scale=0.039 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 12 | scale=0.033 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 13 | scale=0.028 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 14 | scale=0.024 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 15 | scale=0.021 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 16 | scale=0.017 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 17 | scale=0.015 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 18 | scale=0.013 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 19 | scale=0.011 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+Iter 20 | scale=0.009 | valid=20/20 | best_this=1.0000 | best_overall=1.0000
+
+============================================================
+Final score: 1.0000
+
+Best parameters:
+  Cfly1           = 158.2541
+  Cfly2           = 145.8093
+  Cmid            = 28.9440
+  Cout            = 200.0000
+  Freq            = 20.2052
+  Ln1             = 0.5000
+  Ln2             = 0.5000
+  Lp1             = 0.5000
+  Lp2             = 0.5000
+  Rload           = 3500.0000
+  Wn1             = 62.6805
+  Wn2             = 76.6326
+  Wp1             = 50.0000
+  Wp2             = 79.5194
+
+Spec details:
+  vout_v               = 4.34692  [PASS]
+  iout_ma              = 1.24198  [PASS]
+  efficiency_pct       = 80.9149  [PASS]
+  ripple_mv            = 24.553  [PASS]
+  startup_us           = 0.870277  [PASS]
