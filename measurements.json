@@ -1,51 +1,51 @@
 {
   "measurements": {
     "Doing analysis at TEMP": 27.0,
-    "vout_avg": 2.97011,
-    "RESULT_VOUT_V": 2.97011,
-    "vout_max": 2.97274,
-    "vout_min": 2.96397,
-    "RESULT_RIPPLE_MV": 8.775,
-    "RESULT_IOUT_MA": 1.14842,
-    "avg_pvdd": -0.00206193,
-    "avg_pclk1": -0.00205228,
-    "avg_pclk2": -0.00204033,
-    "RESULT_EFFICIENCY_PCT": 55.4216,
-    "startup_t": 2.06054e-06,
-    "RESULT_STARTUP_US": 2.06054
+    "vout_avg": 2.76878,
+    "RESULT_VOUT_V": 2.76878,
+    "vout_max": 2.77571,
+    "vout_min": 2.75267,
+    "RESULT_RIPPLE_MV": 23.047,
+    "RESULT_IOUT_MA": 1.20664,
+    "avg_pvdd": -0.00217011,
+    "avg_pclk1": -0.00217241,
+    "avg_pclk2": -0.0021611,
+    "RESULT_EFFICIENCY_PCT": 51.37,
+    "startup_t": 1.28679e-06,
+    "RESULT_STARTUP_US": 1.28679
   },
-  "score": 0.9975091666666667,
+  "score": 0.9807316666666667,
   "details": {
     "vout_v": {
-      "measured": 2.97011,
+      "measured": 2.76878,
       "target": ">3.0",
       "met": false,
-      "score": 0.9900366666666667,
+      "score": 0.9229266666666667,
       "unit": "V"
     },
     "iout_ma": {
-      "measured": 1.14842,
+      "measured": 1.20664,
       "target": ">1",
       "met": true,
       "score": 1.0,
       "unit": "mA"
     },
     "efficiency_pct": {
-      "measured": 55.4216,
+      "measured": 51.37,
       "target": ">50",
       "met": true,
       "score": 1.0,
       "unit": "%"
     },
     "ripple_mv": {
-      "measured": 8.775,
+      "measured": 23.047,
       "target": "<100",
       "met": true,
       "score": 1.0,
       "unit": "mV"
     },
     "startup_us": {
-      "measured": 2.06054,
+      "measured": 1.28679,
       "target": "<50",
       "met": true,
       "score": 1.0,
@@ -53,26 +53,26 @@
     }
   },
   "parameters": {
-    "Cfly1": 192.6089490309536,
-    "Cfly2": 427.95839092878697,
-    "Cmid": 126.84583420382425,
-    "Cout": 296.645198189975,
-    "Freq": 23.093961443195525,
-    "Ln1": 0.5688828352978305,
-    "Ln2": 0.6764201364168918,
-    "Lp1": 2.4788403600976325,
-    "Lp2": 1.8017159556684386,
-    "Rload": 2586.252668550297,
-    "Wn1": 38.72372437617099,
-    "Wn2": 70.53330321975673,
-    "Wp1": 34.96085955020746,
-    "Wp2": 33.60288722292869
+    "Cfly1": 371.2150744647684,
+    "Cfly2": 209.4285874218751,
+    "Cmid": 209.2459208790844,
+    "Cout": 156.89389677966835,
+    "Freq": 17.247695727856183,
+    "Ln1": 1.0460521434627468,
+    "Ln2": 0.903091671052208,
+    "Lp1": 2.077184596427898,
+    "Lp2": 0.689004758345105,
+    "Rload": 2294.619037095851,
+    "Wn1": 60.23201693444659,
+    "Wn2": 63.583046929836264,
+    "Wp1": 39.87929647885173,
+    "Wp2": 63.475712364037925
   },
   "de_result": {
-    "converged": true,
-    "iterations": 29,
-    "diversity": 0.28527168044669937,
-    "stop_reason": "metric_threshold",
-    "best_metric": -3.763979298611111
+    "converged": false,
+    "iterations": 40,
+    "diversity": 0.2849020895036642,
+    "stop_reason": "max_iterations",
+    "best_metric": -2.725998961111111
   }
 }
