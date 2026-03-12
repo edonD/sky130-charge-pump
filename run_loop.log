@@ -1,16 +1,46 @@
-=== Charge Pump Autoresearch Loop Started: Wed Mar 11 19:10:47 UTC 2026 ===
+Initial: score=49.56, specs_met=True
+  RESULT_EFFICIENCY_PCT: 67.2398
+  RESULT_IOUT_MA: 1.1937
+  RESULT_RIPPLE_MV: 4.6490
+  RESULT_STARTUP_US: 0.7383
+  RESULT_VOUT_V: 3.5930
+[   6] IMPROVED score=51.49 no_imp=0 met=True
+  RESULT_EFFICIENCY_PCT: 71.2994
+  RESULT_IOUT_MA: 1.1572
+  RESULT_RIPPLE_MV: 7.5170
+  RESULT_STARTUP_US: 0.8319
+  RESULT_VOUT_V: 3.7891
+[  10] IMPROVED score=52.54 no_imp=0 met=True
+  RESULT_EFFICIENCY_PCT: 72.6167
+  RESULT_IOUT_MA: 1.1159
+  RESULT_RIPPLE_MV: 5.8080
+  RESULT_STARTUP_US: 0.6935
+  RESULT_VOUT_V: 3.9056
+[  16] IMPROVED score=58.26 no_imp=0 met=True
+  RESULT_EFFICIENCY_PCT: 80.9149
+  RESULT_IOUT_MA: 1.2420
+  RESULT_RIPPLE_MV: 24.5530
+  RESULT_STARTUP_US: 0.8703
+  RESULT_VOUT_V: 4.3469
+[  20] score=58.26 no_imp=4
+[  40] score=58.26 no_imp=24
+[  60] score=58.26 no_imp=44
 
-=== ITERATION 1 — Wed Mar 11 19:10:47 UTC 2026 ===
-=== Charge Pump Autoresearch Loop Started: Wed Mar 11 21:07:03 UTC 2026 ===
+Done after 66 iterations, no_improve=50
+Best score: 58.26, all_met: True
 
-=== ITERATION 1 — Wed Mar 11 21:07:03 UTC 2026 ===
-=== Charge Pump Autoresearch Loop Started: Wed Mar 11 21:53:04 UTC 2026 ===
-
-=== ITERATION 1 — Wed Mar 11 21:53:04 UTC 2026 ===
-Claude exited with code 0 at Wed Mar 11 22:40:02 UTC 2026
-
-=== ITERATION 2 — Wed Mar 11 22:40:07 UTC 2026 ===
-This is the successful DE run that already completed and whose results I processed, validated, and committed. Iteration 2 is fully done — score 1.00, all 5/5 specs met, results pushed.
-Claude exited with code 0 at Thu Mar 12 00:46:15 UTC 2026
-
-=== ITERATION 3 — Thu Mar 12 00:46:20 UTC 2026 ===
+Best parameters:
+  Cfly1: 158.254120
+  Cfly2: 145.809306
+  Cmid: 28.943975
+  Cout: 200.000000
+  Freq: 20.205236
+  Ln1: 0.500000
+  Ln2: 0.500000
+  Lp1: 0.500000
+  Lp2: 0.500000
+  Rload: 3500.000000
+  Wn1: 62.680550
+  Wn2: 76.632620
+  Wp1: 50.000000
+  Wp2: 79.519379

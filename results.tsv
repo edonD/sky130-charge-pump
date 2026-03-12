@@ -1,2 +1,3 @@
 step	commit	score	topology	specs_met	notes
 1	23deda0	1.00	2-stage-pelliconi-xcoupled	5/5	Vout=3.59V Iout=1.19mA Eff=67.0% Ripple=5.0mV Startup=0.74us
+2	134c2a0	1.00	2-stage-pelliconi-xcoupled	5/5	Vout=4.34V Iout=1.24mA Eff=80.8% Ripple=24.4mV Startup=0.87us

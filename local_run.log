@@ -1,0 +1,6 @@
+Starting local optimization around known-good parameters
+Base params: {'Cfly1': 90.65852454590835, 'Cfly2': 151.5040290051253, 'Cmid': 21.715846182472713, 'Cout': 110.2611804548475, 'Freq': 48.38417668754817, 'Ln1': 0.6575015813946639, 'Ln2': 0.6998581326707901, 'Lp1': 1.4931390714834114, 'Lp2': 0.5, 'Rload': 2442.910171156999, 'Wn1': 54.459248380116485, 'Wn2': 79.29208807672937, 'Wp1': 24.81376815843132, 'Wp2': 38.055445895764834}
+Iter  1 | scale=0.200 | valid=0/40 | best_this=-1000000.0000 | best_overall=-1.0000
+Iter  2 | scale=0.170 | valid=0/40 | best_this=-1000000.0000 | best_overall=-1.0000
+Iter  3 | scale=0.144 | valid=0/40 | best_this=-1000000.0000 | best_overall=-1.0000
+Iter  4 | scale=0.123 | valid=0/40 | best_this=-1000000.0000 | best_overall=-1.0000

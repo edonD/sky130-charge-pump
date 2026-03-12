@@ -3,4 +3,7 @@ Design: SKY130 Charge Pump Voltage Doubler
 Parameters: 14
 Specs: 5
 
-DE: 14 params, pop=100, patience=50, workers=32
+DE: 14 params, pop=30, patience=10, workers=8
+[DE] iter    1 | best: 1.126393e+01 | no_improve:   0 | div: 0.2892 | dt: 365.547s
+[DE] iter    2 | best: 1.126393e+01 | no_improve:   1 | div: 0.2816 | dt: 392.757s
+[DE] iter    3 | best: 1.126393e+01 | no_improve:   2 | div: 0.2817 | dt: 394.569s
