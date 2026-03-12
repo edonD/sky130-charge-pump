@@ -205,6 +205,7 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
         return 1e6
 
     cost = 0.0
+    n_missed = 0
     spec_defs = specs["measurements"]
 
     for spec_name, spec_def in spec_defs.items():
@@ -215,6 +216,7 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
 
         if measured is None:
             cost += weight * 1000
+            n_missed += 1
             continue
 
         if direction == "above":
@@ -223,7 +225,8 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
                 cost -= weight * min(ratio - 1.0, 1.0) * 10
             else:
                 gap = (val1 - measured) / max(abs(val1), 1e-12)
-                cost += weight * gap ** 2 * 500
+                cost += weight * (gap * 100 + gap ** 2 * 500)
+                n_missed += 1
 
         elif direction == "below":
             if measured <= val1:
@@ -231,7 +234,8 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
                 cost -= weight * min(1.0 - ratio, 1.0) * 10
             else:
                 gap = (measured - val1) / max(abs(val1), 1e-12)
-                cost += weight * gap ** 2 * 500
+                cost += weight * (gap * 100 + gap ** 2 * 500)
+                n_missed += 1
 
         elif direction == "range":
             if val1 <= measured <= val2:
@@ -244,14 +248,19 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
                     gap = (val1 - measured) / max(abs(val1), 1e-12)
                 else:
                     gap = (measured - val2) / max(abs(val2), 1e-12)
-                cost += weight * gap ** 2 * 500
+                cost += weight * (gap * 100 + gap ** 2 * 500)
+                n_missed += 1
 
         elif direction == "exact":
             if abs(measured - val1) < 0.01 * max(abs(val1), 1):
                 cost -= weight * 10
             else:
                 gap = abs(measured - val1) / max(abs(val1), 1e-12)
-                cost += weight * gap ** 2 * 500
+                cost += weight * (gap * 100 + gap ** 2 * 500)
+                n_missed += 1
+
+    # Large flat penalty per missed spec — ensures meeting all specs is strongly preferred
+    cost += n_missed * 20.0
 
     return cost
 

@@ -1,51 +1,51 @@
 {
   "measurements": {
     "Doing analysis at TEMP": 27.0,
-    "vout_avg": 3.14232,
-    "RESULT_VOUT_V": 3.14232,
-    "vout_max": 3.14356,
-    "vout_min": 3.13888,
-    "RESULT_RIPPLE_MV": 4.684,
-    "RESULT_IOUT_MA": 1.08167,
-    "avg_pvdd": -0.00194688,
-    "avg_pclk1": -0.00194864,
-    "avg_pclk2": -0.00194725,
-    "RESULT_EFFICIENCY_PCT": 58.1736,
-    "startup_t": 1.13825e-06,
-    "RESULT_STARTUP_US": 1.13825
+    "vout_avg": 2.97011,
+    "RESULT_VOUT_V": 2.97011,
+    "vout_max": 2.97274,
+    "vout_min": 2.96397,
+    "RESULT_RIPPLE_MV": 8.775,
+    "RESULT_IOUT_MA": 1.14842,
+    "avg_pvdd": -0.00206193,
+    "avg_pclk1": -0.00205228,
+    "avg_pclk2": -0.00204033,
+    "RESULT_EFFICIENCY_PCT": 55.4216,
+    "startup_t": 2.06054e-06,
+    "RESULT_STARTUP_US": 2.06054
   },
-  "score": 1.0,
+  "score": 0.9975091666666667,
   "details": {
     "vout_v": {
-      "measured": 3.14232,
+      "measured": 2.97011,
       "target": ">3.0",
-      "met": true,
-      "score": 1.0,
+      "met": false,
+      "score": 0.9900366666666667,
       "unit": "V"
     },
     "iout_ma": {
-      "measured": 1.08167,
+      "measured": 1.14842,
       "target": ">1",
       "met": true,
       "score": 1.0,
       "unit": "mA"
     },
     "efficiency_pct": {
-      "measured": 58.1736,
+      "measured": 55.4216,
       "target": ">50",
       "met": true,
       "score": 1.0,
       "unit": "%"
     },
     "ripple_mv": {
-      "measured": 4.684,
+      "measured": 8.775,
       "target": "<100",
       "met": true,
       "score": 1.0,
       "unit": "mV"
     },
     "startup_us": {
-      "measured": 1.13825,
+      "measured": 2.06054,
       "target": "<50",
       "met": true,
       "score": 1.0,
@@ -53,26 +53,26 @@
     }
   },
   "parameters": {
-    "Cfly1": 706.480871919862,
-    "Cfly2": 253.31241303642034,
-    "Cmid": 123.75489615790966,
-    "Cout": 138.90748975690133,
-    "Freq": 41.01989476264076,
-    "Ln1": 0.6539104292691242,
-    "Ln2": 1.2236841754104029,
-    "Lp1": 0.886428038224349,
-    "Lp2": 0.601446124796837,
-    "Rload": 2905.071541208752,
-    "Wn1": 53.687166360455116,
-    "Wn2": 87.4155720841932,
-    "Wp1": 25.670723302475185,
-    "Wp2": 67.46919752459169
+    "Cfly1": 192.6089490309536,
+    "Cfly2": 427.95839092878697,
+    "Cmid": 126.84583420382425,
+    "Cout": 296.645198189975,
+    "Freq": 23.093961443195525,
+    "Ln1": 0.5688828352978305,
+    "Ln2": 0.6764201364168918,
+    "Lp1": 2.4788403600976325,
+    "Lp2": 1.8017159556684386,
+    "Rload": 2586.252668550297,
+    "Wn1": 38.72372437617099,
+    "Wn2": 70.53330321975673,
+    "Wp1": 34.96085955020746,
+    "Wp2": 33.60288722292869
   },
   "de_result": {
     "converged": true,
-    "iterations": 58,
-    "diversity": 0.28373307827406397,
+    "iterations": 29,
+    "diversity": 0.28527168044669937,
     "stop_reason": "metric_threshold",
-    "best_metric": -3.9810564999999998
+    "best_metric": -3.763979298611111
   }
 }
