@@ -1,0 +1,33 @@
+Baseline score: 84.649
+  Vout=3.909V Iout=1.974mA Eff=72.9% Ripple=7.3mV
+Round  1 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round  2 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round  3 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round  4 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round  5 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round  6 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round  7 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round  8 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round  9 | score=84.649 | Vout=3.91V Iout=1.97mA Eff=72.9% Ripple=7.3mV
+Round 10 | score=90.801 | Vout=4.24V Iout=1.71mA Eff=78.9% Ripple=4.1mV *
+Round 11 | score=90.801 | Vout=4.24V Iout=1.71mA Eff=78.9% Ripple=4.1mV
+Round 12 | score=90.801 | Vout=4.24V Iout=1.71mA Eff=78.9% Ripple=4.1mV
+Round 13 | score=92.878 | Vout=4.30V Iout=1.72mA Eff=79.9% Ripple=3.3mV *
+Round 14 | score=92.878 | Vout=4.30V Iout=1.72mA Eff=79.9% Ripple=3.3mV
+Round 15 | score=92.878 | Vout=4.30V Iout=1.72mA Eff=79.9% Ripple=3.3mV
+Round 16 | score=94.010 | Vout=4.43V Iout=1.57mA Eff=82.3% Ripple=3.2mV *
+Round 17 | score=94.010 | Vout=4.43V Iout=1.57mA Eff=82.3% Ripple=3.2mV
+Round 18 | score=95.273 | Vout=4.49V Iout=1.53mA Eff=83.5% Ripple=3.6mV *
+Round 19 | score=95.273 | Vout=4.49V Iout=1.53mA Eff=83.5% Ripple=3.6mV
+Round 20 | score=95.273 | Vout=4.49V Iout=1.53mA Eff=83.5% Ripple=3.6mV
+
+Final best score: 95.273
+Best measurements: {
+  "RESULT_VOUT_V": 4.4898,
+  "RESULT_RIPPLE_MV": 3.646,
+  "RESULT_IOUT_MA": 1.5286,
+  "RESULT_EFFICIENCY_PCT": 83.5184,
+  "RESULT_STARTUP_US": 0.7392
+}
+
+Saved best_parameters.csv and measurements.json

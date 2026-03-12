@@ -311,9 +311,9 @@ def run_de(template: str, params: List[Dict], specs: Dict,
     os.unlink(tmp_csv)
 
     n_params = len(params)
-    pop_size = max(100, 5 * n_params) if not quick else max(30, 2 * n_params)
-    patience = 50 if not quick else 10
-    min_iter = 30 if not quick else 5
+    pop_size = max(100, 5 * n_params) if not quick else max(50, 3 * n_params)
+    patience = 50 if not quick else 15
+    min_iter = 30 if not quick else 8
     max_iter = 5000 if not quick else 50
 
     if not n_workers:
@@ -342,7 +342,7 @@ def run_de(template: str, params: List[Dict], specs: Dict,
         opt_dir="min",
         min_iterations=min_iter,
         max_iterations=max_iter,
-        metric_threshold=-50.0,
+        metric_threshold=-3.5,
         patience=patience,
         F1=0.7, F2=0.3, F3=0.1, CR=0.9,
     )
