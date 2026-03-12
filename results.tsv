@@ -6,3 +6,4 @@ step	commit	score	topology	specs_met	notes
 5	4b04521	1.00	2-stage-pelliconi-xcoupled	5/5	Vout=4.49V Iout=1.53mA Eff=83.5% Ripple=3.6mV Startup=0.74us MaxIout@3V=3.22mA
 6	5427683	1.00	2-stage-pelliconi-xcoupled	5/5	Vout=3.14V Iout=1.08mA Eff=58.2% Ripple=4.7mV Startup=1.14us MaxIout@3V=1.10mA (regression: wider ranges hurt convergence)
 7	2e34b0e	0.98	2-stage-pelliconi-xcoupled	4/5	Vout=2.77V(FAIL) Iout=1.21mA Eff=51.4% Ripple=23.0mV Startup=1.29us MaxIout@3V=1.07mA (DE stuck in local min)
+8	ab5f4ae	1.00	2-stage-pelliconi-xcoupled	5/5	Vout=3.74V Iout=1.11mA Eff=69.7% Ripple=6.0mV Startup=0.89us MaxIout@3V=2.00mA (seeded DE from iter-5 best)

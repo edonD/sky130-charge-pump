@@ -1,0 +1,28 @@
+Running startup simulation...
+  Startup plot saved. Vout_final=3.738V
+  Ripple plot saved. Ripple=6.0mV
+Running load sweep...
+  Rload=500 -> Vout=1.760V Iout=3.52mA Eff=33.7%
+  Rload=585 -> Vout=1.939V Iout=3.31mA Eff=37.0%
+  Rload=685 -> Vout=2.123V Iout=3.10mA Eff=40.5%
+  Rload=802 -> Vout=2.310V Iout=2.88mA Eff=44.1%
+  Rload=939 -> Vout=2.494V Iout=2.66mA Eff=47.4%
+  Rload=1100 -> Vout=2.676V Iout=2.43mA Eff=50.7%
+  Rload=1288 -> Vout=2.852V Iout=2.21mA Eff=53.8%
+  Rload=1508 -> Vout=3.017V Iout=2.00mA Eff=56.7%
+  Rload=1765 -> Vout=3.179V Iout=1.80mA Eff=59.6%
+  Rload=2067 -> Vout=3.331V Iout=1.61mA Eff=62.3%
+  Rload=2419 -> Vout=3.474V Iout=1.44mA Eff=64.9%
+  Rload=2833 -> Vout=3.608V Iout=1.27mA Eff=67.3%
+  Rload=3316 -> Vout=3.727V Iout=1.12mA Eff=69.5%
+  Rload=3883 -> Vout=3.835V Iout=0.99mA Eff=71.5%
+  Rload=4546 -> Vout=3.930V Iout=0.86mA Eff=73.2%
+  Rload=5322 -> Vout=4.015V Iout=0.75mA Eff=74.7%
+  Rload=6231 -> Vout=4.088V Iout=0.66mA Eff=75.9%
+  Rload=7295 -> Vout=4.153V Iout=0.57mA Eff=77.0%
+  Rload=8541 -> Vout=4.210V Iout=0.49mA Eff=77.9%
+  Rload=10000 -> Vout=4.260V Iout=0.43mA Eff=78.7%
+  Vout vs Iload plot saved. MaxIout@3V=2.00mA
+  Efficiency plot saved.
+
+Validation complete. MaxIout@3V=2.00mA
