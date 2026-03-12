@@ -205,6 +205,7 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
         return 1e6
 
     cost = 0.0
+    n_missed = 0
     spec_defs = specs["measurements"]
 
     for spec_name, spec_def in spec_defs.items():
@@ -215,24 +216,26 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
 
         if measured is None:
             cost += weight * 1000
+            n_missed += 1
             continue
 
         if direction == "above":
             if measured >= val1:
                 ratio = measured / max(abs(val1), 1e-12)
-                # Stronger reward for margin beyond spec (up to 3x bonus)
-                cost -= weight * min(ratio - 1.0, 3.0) * 15
+                cost -= weight * min(ratio - 1.0, 1.0) * 10
             else:
                 gap = (val1 - measured) / max(abs(val1), 1e-12)
-                cost += weight * gap ** 2 * 500
+                cost += weight * (gap * 100 + gap ** 2 * 500)
+                n_missed += 1
 
         elif direction == "below":
             if measured <= val1:
                 ratio = measured / max(abs(val1), 1e-12)
-                cost -= weight * min(1.0 - ratio, 1.0) * 15
+                cost -= weight * min(1.0 - ratio, 1.0) * 10
             else:
                 gap = (measured - val1) / max(abs(val1), 1e-12)
-                cost += weight * gap ** 2 * 500
+                cost += weight * (gap * 100 + gap ** 2 * 500)
+                n_missed += 1
 
         elif direction == "range":
             if val1 <= measured <= val2:
@@ -245,14 +248,19 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
                     gap = (val1 - measured) / max(abs(val1), 1e-12)
                 else:
                     gap = (measured - val2) / max(abs(val2), 1e-12)
-                cost += weight * gap ** 2 * 500
+                cost += weight * (gap * 100 + gap ** 2 * 500)
+                n_missed += 1
 
         elif direction == "exact":
             if abs(measured - val1) < 0.01 * max(abs(val1), 1):
                 cost -= weight * 10
             else:
                 gap = abs(measured - val1) / max(abs(val1), 1e-12)
-                cost += weight * gap ** 2 * 500
+                cost += weight * (gap * 100 + gap ** 2 * 500)
+                n_missed += 1
+
+    # Large flat penalty per missed spec — ensures meeting all specs is strongly preferred
+    cost += n_missed * 20.0
 
     return cost
 
@@ -312,10 +320,10 @@ def run_de(template: str, params: List[Dict], specs: Dict,
     os.unlink(tmp_csv)
 
     n_params = len(params)
-    pop_size = max(120, 6 * n_params) if not quick else max(50, 3 * n_params)
-    patience = 60 if not quick else 15
-    min_iter = 40 if not quick else 8
-    max_iter = 5000 if not quick else 50
+    pop_size = max(100, 5 * n_params) if not quick else max(50, 3 * n_params)
+    patience = 20 if not quick else 10
+    min_iter = 20 if not quick else 8
+    max_iter = 80 if not quick else 30
 
     if not n_workers:
         n_workers = os.cpu_count() or 8
@@ -343,7 +351,7 @@ def run_de(template: str, params: List[Dict], specs: Dict,
         opt_dir="min",
         min_iterations=min_iter,
         max_iterations=max_iter,
-        metric_threshold=-5.0,
+        metric_threshold=-3.5,
         patience=patience,
         F1=0.7, F2=0.3, F3=0.1, CR=0.9,
     )

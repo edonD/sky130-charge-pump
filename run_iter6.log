@@ -1,0 +1,128 @@
+Loading design...
+Design: SKY130 Charge Pump Voltage Doubler
+Parameters: 14
+Specs: 5
+
+DE: 14 params, pop=100, patience=15, workers=32
+[DE] iter    1 | best: 1.510091e+01 | no_improve:   0 | div: 0.2887 | dt: 141.298s
+[DE] iter    2 | best: 1.510091e+01 | no_improve:   1 | div: 0.2885 | dt: 138.412s
+[DE] iter    3 | best: 1.331071e+01 | no_improve:   0 | div: 0.2885 | dt: 132.059s
+[DE] iter    4 | best: 1.331071e+01 | no_improve:   1 | div: 0.2884 | dt: 132.631s
+[DE] iter    5 | best: 1.331071e+01 | no_improve:   2 | div: 0.2885 | dt: 152.314s
+[DE] iter    6 | best: 1.263697e+01 | no_improve:   0 | div: 0.2883 | dt: 144.822s
+[DE] iter    7 | best: 1.263697e+01 | no_improve:   1 | div: 0.2883 | dt: 159.095s
+[DE] iter    8 | best: 1.263697e+01 | no_improve:   2 | div: 0.2883 | dt: 155.943s
+[DE] iter    9 | best: 1.263697e+01 | no_improve:   3 | div: 0.2883 | dt: 168.722s
+[DE] iter   10 | best: 1.263697e+01 | no_improve:   4 | div: 0.2883 | dt: 161.208s
+[DE] iter   11 | best: 1.263697e+01 | no_improve:   5 | div: 0.2883 | dt: 140.742s
+[DE] iter   12 | best: 1.263697e+01 | no_improve:   6 | div: 0.2889 | dt: 148.492s
+[DE] iter   13 | best: 1.263697e+01 | no_improve:   7 | div: 0.2888 | dt: 147.035s
+[DE] iter   14 | best: 1.060933e+01 | no_improve:   0 | div: 0.2883 | dt: 133.991s
+[DE] iter   15 | best: 1.060933e+01 | no_improve:   1 | div: 0.2884 | dt: 140.535s
+[DE] iter   16 | best: 1.060933e+01 | no_improve:   2 | div: 0.2882 | dt: 132.995s
+[DE] iter   17 | best: 3.494576e+00 | no_improve:   0 | div: 0.2880 | dt: 138.360s
+[DE] iter   18 | best: 3.494576e+00 | no_improve:   1 | div: 0.2873 | dt: 135.441s
+[DE] iter   19 | best: 3.494576e+00 | no_improve:   2 | div: 0.2873 | dt: 137.791s
+[DE] iter   20 | best: 3.002683e+00 | no_improve:   0 | div: 0.2875 | dt: 138.208s
+[DE] iter   21 | best: 3.002683e+00 | no_improve:   1 | div: 0.2875 | dt: 131.944s
+[DE] iter   22 | best: 3.002683e+00 | no_improve:   2 | div: 0.2867 | dt: 133.465s
+[DE] iter   23 | best: -1.078717e-01 | no_improve:   0 | div: 0.2864 | dt: 139.394s
+[DE] iter   24 | best: -1.078717e-01 | no_improve:   1 | div: 0.2864 | dt: 157.269s
+[DE] iter   25 | best: -1.078717e-01 | no_improve:   2 | div: 0.2855 | dt: 148.378s
+[DE] iter   26 | best: -1.078717e-01 | no_improve:   3 | div: 0.2844 | dt: 147.882s
+[DE] iter   27 | best: -1.078717e-01 | no_improve:   4 | div: 0.2844 | dt: 153.160s
+[DE] iter   28 | best: -1.078717e-01 | no_improve:   5 | div: 0.2850 | dt: 134.648s
+[DE] iter   29 | best: -3.379509e+00 | no_improve:   0 | div: 0.2845 | dt: 158.384s
+[DE] iter   30 | best: -3.379509e+00 | no_improve:   1 | div: 0.2845 | dt: 137.005s
+[DE] iter   31 | best: -3.379509e+00 | no_improve:   2 | div: 0.2857 | dt: 146.943s
+[DE] iter   32 | best: -3.379509e+00 | no_improve:   3 | div: 0.2857 | dt: 140.038s
+[DE] iter   33 | best: -3.379509e+00 | no_improve:   4 | div: 0.2856 | dt: 141.435s
+[DE] iter   34 | best: -3.379509e+00 | no_improve:   5 | div: 0.2856 | dt: 166.602s
+[DE] iter   35 | best: -3.379509e+00 | no_improve:   6 | div: 0.2856 | dt: 139.852s
+[DE] iter   36 | best: -3.379509e+00 | no_improve:   7 | div: 0.2847 | dt: 155.258s
+[DE] iter   37 | best: -3.379509e+00 | no_improve:   8 | div: 0.2848 | dt: 133.784s
+[DE] iter   38 | best: -3.379509e+00 | no_improve:   9 | div: 0.2848 | dt: 137.768s
+[DE] iter   39 | best: -3.379509e+00 | no_improve:  10 | div: 0.2848 | dt: 138.384s
+[DE] iter   40 | best: -3.379509e+00 | no_improve:  11 | div: 0.2848 | dt: 139.419s
+[DE] iter   41 | best: -3.379509e+00 | no_improve:  12 | div: 0.2842 | dt: 135.655s
+[DE] iter   42 | best: -3.379509e+00 | no_improve:  13 | div: 0.2833 | dt: 138.026s
+[DE] iter   43 | best: -3.379509e+00 | no_improve:  14 | div: 0.2833 | dt: 132.012s
+[DE] iter   44 | best: -3.379509e+00 | no_improve:  15 | div: 0.2833 | dt: 141.572s
+[DE] iter   45 | best: -3.379509e+00 | no_improve:  16 | div: 0.2833 | dt: 138.743s
+[DE] iter   46 | best: -3.379509e+00 | no_improve:  17 | div: 0.2833 | dt: 138.051s
+[DE] iter   47 | best: -3.379509e+00 | no_improve:  18 | div: 0.2833 | dt: 137.043s
+[DE] iter   48 | best: -3.379509e+00 | no_improve:  19 | div: 0.2836 | dt: 140.969s
+[DE] iter   49 | best: -3.379509e+00 | no_improve:  20 | div: 0.2836 | dt: 150.781s
+[DE] iter   50 | best: -3.379509e+00 | no_improve:  21 | div: 0.2843 | dt: 141.557s
+[DE] iter   51 | best: -3.379509e+00 | no_improve:  22 | div: 0.2843 | dt: 142.445s
+[DE] iter   52 | best: -3.379509e+00 | no_improve:  23 | div: 0.2839 | dt: 154.293s
+[DE] iter   53 | best: -3.379509e+00 | no_improve:  24 | div: 0.2839 | dt: 156.354s
+[DE] iter   54 | best: -3.379509e+00 | no_improve:  25 | div: 0.2839 | dt: 139.452s
+[DE] iter   55 | best: -3.379509e+00 | no_improve:  26 | div: 0.2839 | dt: 137.562s
+[DE] iter   56 | best: -3.379509e+00 | no_improve:  27 | div: 0.2839 | dt: 148.346s
+[DE] iter   57 | best: -3.379509e+00 | no_improve:  28 | div: 0.2839 | dt: 137.148s
+[DE] iter   58 | best: -3.981056e+00 | no_improve:   0 | div: 0.2837 | dt: 157.883s
+
+============================================================
+  Stop reason:  metric_threshold
+  Converged:    True
+  Iterations:   58
+  Best metric:  -3.981056e+00
+  Diversity:    0.2837
+  Best parameters:
+    Cfly1: 7.064809e+02
+    Cfly2: 2.533124e+02
+    Cmid: 1.237549e+02
+    Cout: 1.389075e+02
+    Freq: 4.101989e+01
+    Ln1: 6.539104e-01
+    Ln2: 1.223684e+00
+    Lp1: 8.864280e-01
+    Lp2: 6.014461e-01
+    Rload: 2.905072e+03
+    Wn1: 5.368717e+01
+    Wn2: 8.741557e+01
+    Wp1: 2.567072e+01
+    Wp2: 6.746920e+01
+============================================================
+
+
+======================================================================
+  EVALUATION REPORT — SKY130 Charge Pump Voltage Doubler
+======================================================================
+
+  Score: 1.00 / 1.00  |  Time: 8329.2s
+  DE converged: True  |  Iterations: 58  |  Diversity: 0.2837
+  Stop reason: metric_threshold
+
+  Specs met: 5/5
+
+  Spec                            Target     Measured     Unit   Status  Score
+  -------------------------------------------------------------------------
+  vout_v                            >3.0        3.142        V     PASS  1.00
+  iout_ma                             >1        1.082       mA     PASS  1.00
+  efficiency_pct                     >50       58.174        %     PASS  1.00
+  ripple_mv                         <100        4.684       mV     PASS  1.00
+  startup_us                         <50        1.138       us     PASS  1.00
+
+  Best Parameters:
+    Cfly1                = 7.0648e+02
+    Cfly2                = 2.5331e+02
+    Cmid                 = 1.2375e+02
+    Cout                 = 1.3891e+02
+    Freq                 = 4.1020e+01
+    Ln1                  = 6.5391e-01
+    Ln2                  = 1.2237e+00
+    Lp1                  = 8.8643e-01
+    Lp2                  = 6.0145e-01
+    Rload                = 2.9051e+03
+    Wn1                  = 5.3687e+01
+    Wn2                  = 8.7416e+01
+    Wp1                  = 2.5671e+01
+    Wp2                  = 6.7469e+01
+
+======================================================================
+
+
+Saved: best_parameters.csv, measurements.json, plots/
+Score: 1.00 | Specs met: 5/5 | Converged: True

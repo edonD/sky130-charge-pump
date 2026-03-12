@@ -1,27 +1,78 @@
 {
   "measurements": {
-    "RESULT_VOUT_V": 4.48984,
-    "RESULT_RIPPLE_MV": 3.646,
-    "RESULT_IOUT_MA": 1.52855,
-    "RESULT_EFFICIENCY_PCT": 83.5184,
-    "RESULT_STARTUP_US": 0.739185
+    "Doing analysis at TEMP": 27.0,
+    "vout_avg": 2.97011,
+    "RESULT_VOUT_V": 2.97011,
+    "vout_max": 2.97274,
+    "vout_min": 2.96397,
+    "RESULT_RIPPLE_MV": 8.775,
+    "RESULT_IOUT_MA": 1.14842,
+    "avg_pvdd": -0.00206193,
+    "avg_pclk1": -0.00205228,
+    "avg_pclk2": -0.00204033,
+    "RESULT_EFFICIENCY_PCT": 55.4216,
+    "startup_t": 2.06054e-06,
+    "RESULT_STARTUP_US": 2.06054
   },
-  "score": 1.0,
-  "details": {},
+  "score": 0.9975091666666667,
+  "details": {
+    "vout_v": {
+      "measured": 2.97011,
+      "target": ">3.0",
+      "met": false,
+      "score": 0.9900366666666667,
+      "unit": "V"
+    },
+    "iout_ma": {
+      "measured": 1.14842,
+      "target": ">1",
+      "met": true,
+      "score": 1.0,
+      "unit": "mA"
+    },
+    "efficiency_pct": {
+      "measured": 55.4216,
+      "target": ">50",
+      "met": true,
+      "score": 1.0,
+      "unit": "%"
+    },
+    "ripple_mv": {
+      "measured": 8.775,
+      "target": "<100",
+      "met": true,
+      "score": 1.0,
+      "unit": "mV"
+    },
+    "startup_us": {
+      "measured": 2.06054,
+      "target": "<50",
+      "met": true,
+      "score": 1.0,
+      "unit": "us"
+    }
+  },
   "parameters": {
-    "Cfly1": 135.20482984767986,
-    "Cfly2": 125.24222563347095,
-    "Cmid": 14.16998532660793,
-    "Cout": 285.47418624237395,
-    "Freq": 59.999999999999986,
-    "Ln1": 0.5911481662314851,
-    "Ln2": 0.5,
-    "Lp1": 0.5,
-    "Lp2": 0.5,
-    "Rload": 2937.327203483129,
-    "Wn1": 73.75056920676282,
-    "Wn2": 85.0018156832435,
-    "Wp1": 88.41317999622052,
-    "Wp2": 94.93489614174223
+    "Cfly1": 192.6089490309536,
+    "Cfly2": 427.95839092878697,
+    "Cmid": 126.84583420382425,
+    "Cout": 296.645198189975,
+    "Freq": 23.093961443195525,
+    "Ln1": 0.5688828352978305,
+    "Ln2": 0.6764201364168918,
+    "Lp1": 2.4788403600976325,
+    "Lp2": 1.8017159556684386,
+    "Rload": 2586.252668550297,
+    "Wn1": 38.72372437617099,
+    "Wn2": 70.53330321975673,
+    "Wp1": 34.96085955020746,
+    "Wp2": 33.60288722292869
+  },
+  "de_result": {
+    "converged": true,
+    "iterations": 29,
+    "diversity": 0.28527168044669937,
+    "stop_reason": "metric_threshold",
+    "best_metric": -3.763979298611111
   }
 }
