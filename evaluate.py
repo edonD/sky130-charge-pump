@@ -220,7 +220,8 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
         if direction == "above":
             if measured >= val1:
                 ratio = measured / max(abs(val1), 1e-12)
-                cost -= weight * min(ratio - 1.0, 1.0) * 10
+                # Stronger reward for margin beyond spec (up to 3x bonus)
+                cost -= weight * min(ratio - 1.0, 3.0) * 15
             else:
                 gap = (val1 - measured) / max(abs(val1), 1e-12)
                 cost += weight * gap ** 2 * 500
@@ -228,7 +229,7 @@ def compute_cost(measurements: Dict[str, float], specs: Dict) -> float:
         elif direction == "below":
             if measured <= val1:
                 ratio = measured / max(abs(val1), 1e-12)
-                cost -= weight * min(1.0 - ratio, 1.0) * 10
+                cost -= weight * min(1.0 - ratio, 1.0) * 15
             else:
                 gap = (measured - val1) / max(abs(val1), 1e-12)
                 cost += weight * gap ** 2 * 500
@@ -311,9 +312,9 @@ def run_de(template: str, params: List[Dict], specs: Dict,
     os.unlink(tmp_csv)
 
     n_params = len(params)
-    pop_size = max(100, 5 * n_params) if not quick else max(50, 3 * n_params)
-    patience = 50 if not quick else 15
-    min_iter = 30 if not quick else 8
+    pop_size = max(120, 6 * n_params) if not quick else max(50, 3 * n_params)
+    patience = 60 if not quick else 15
+    min_iter = 40 if not quick else 8
     max_iter = 5000 if not quick else 50
 
     if not n_workers:
@@ -342,7 +343,7 @@ def run_de(template: str, params: List[Dict], specs: Dict,
         opt_dir="min",
         min_iterations=min_iter,
         max_iterations=max_iter,
-        metric_threshold=-3.5,
+        metric_threshold=-5.0,
         patience=patience,
         F1=0.7, F2=0.3, F3=0.1, CR=0.9,
     )
