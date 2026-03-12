@@ -1,0 +1,39 @@
+* SKY130 2-Stage Cross-Coupled Charge Pump — Steady-State Ripple Detail
+.lib "sky130_models/sky130.lib.spice" tt
+
+Vdd vdd 0 1.8
+Vss vss 0 0
+
+.param freq_mhz = 60
+.param tper = '1e-6/freq_mhz'
+.param thalf = 'tper/2'
+.param trise = 'tper/50'
+
+Vclk1 clk1 0 PULSE(0 1.8 0 'trise' 'trise' 'thalf-trise' 'tper')
+Vclk2 clk2 0 PULSE(0 1.8 'thalf' 'trise' 'trise' 'thalf-trise' 'tper')
+
+XMN1 a1 b1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W=73.7506u L=0.5911u nf=1
+XMN2 b1 a1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W=73.7506u L=0.5911u nf=1
+XMP1 mid b1 a1 mid sky130_fd_pr__pfet_g5v0d10v5 W=88.4132u L=0.5u nf=1
+XMP2 mid a1 b1 mid sky130_fd_pr__pfet_g5v0d10v5 W=88.4132u L=0.5u nf=1
+C1a a1 clk1 135.205p
+C1b b1 clk2 135.205p
+Cmid mid 0 14.17p
+
+XMN3 a2 b2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W=85.002u L=0.5u nf=1
+XMN4 b2 a2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W=85.002u L=0.5u nf=1
+XMP3 vout b2 a2 vout sky130_fd_pr__pfet_g5v0d10v5 W=94.935u L=0.5u nf=1
+XMP4 vout a2 b2 vout sky130_fd_pr__pfet_g5v0d10v5 W=94.935u L=0.5u nf=1
+C2a a2 clk1 125.242p
+C2b b2 clk2 125.242p
+Cout vout 0 285.474p
+Rload vout 0 2937.327
+
+.options reltol=0.001 method=gear maxord=2
+
+.control
+tran 0.1n 25u uic
+wrdata sims/data_ripple.csv v(vout) v(clk1) v(clk2)
+echo "SIM_DONE"
+.endc
+.end

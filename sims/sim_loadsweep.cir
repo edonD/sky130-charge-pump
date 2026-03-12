@@ -1,0 +1,60 @@
+* SKY130 2-Stage Cross-Coupled Charge Pump — Load Sweep
+* Sweep Rload from 500 to 50000 ohms to get Vout vs Iload curve
+.lib "sky130_models/sky130.lib.spice" tt
+
+Vdd vdd 0 1.8
+Vss vss 0 0
+
+.param freq_mhz = 60
+.param tper = '1e-6/freq_mhz'
+.param thalf = 'tper/2'
+.param trise = 'tper/50'
+.param rval = 2937
+
+Vclk1 clk1 0 PULSE(0 1.8 0 'trise' 'trise' 'thalf-trise' 'tper')
+Vclk2 clk2 0 PULSE(0 1.8 'thalf' 'trise' 'trise' 'thalf-trise' 'tper')
+
+XMN1 a1 b1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W=73.7506u L=0.5911u nf=1
+XMN2 b1 a1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W=73.7506u L=0.5911u nf=1
+XMP1 mid b1 a1 mid sky130_fd_pr__pfet_g5v0d10v5 W=88.4132u L=0.5u nf=1
+XMP2 mid a1 b1 mid sky130_fd_pr__pfet_g5v0d10v5 W=88.4132u L=0.5u nf=1
+C1a a1 clk1 135.205p
+C1b b1 clk2 135.205p
+Cmid mid 0 14.17p
+
+XMN3 a2 b2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W=85.002u L=0.5u nf=1
+XMN4 b2 a2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W=85.002u L=0.5u nf=1
+XMP3 vout b2 a2 vout sky130_fd_pr__pfet_g5v0d10v5 W=94.935u L=0.5u nf=1
+XMP4 vout a2 b2 vout sky130_fd_pr__pfet_g5v0d10v5 W=94.935u L=0.5u nf=1
+C2a a2 clk1 125.242p
+C2b b2 clk2 125.242p
+Cout vout 0 285.474p
+Rload vout 0 {rval}
+
+.options reltol=0.01 method=gear maxord=2
+
+.control
+* Run multiple transient sims with different Rload values
+let rvals = vector(20)
+let idx = 0
+* Rload values from 500 to 50000 (log spaced manually)
+foreach rval_set 500 700 1000 1400 2000 2500 3000 3500 4000 5000 6000 8000 10000 14000 20000 30000 50000
+    alter Rload $rval_set
+    tran 2n 25u uic
+    meas tran vout_avg avg v(vout) from=20u to=25u
+    let pvdd_inst = v(vdd) * i(Vdd)
+    meas tran avg_pvdd avg pvdd_inst from=20u to=25u
+    let pclk1_inst = v(clk1) * i(Vclk1)
+    meas tran avg_pclk1 avg pclk1_inst from=20u to=25u
+    let pclk2_inst = v(clk2) * i(Vclk2)
+    meas tran avg_pclk2 avg pclk2_inst from=20u to=25u
+    let iout_val = vout_avg / $rval_set
+    let pout_val = vout_avg * iout_val
+    let pin_val = abs(avg_pvdd) + abs(avg_pclk1) + abs(avg_pclk2)
+    let eff_val = pout_val / pin_val * 100
+    echo "SWEEP_POINT rval=$rval_set vout=$&vout_avg iout=$&iout_val eff=$&eff_val"
+    reset
+end
+echo "SIM_DONE"
+.endc
+.end

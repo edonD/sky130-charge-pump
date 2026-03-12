@@ -1,0 +1,113 @@
+* SKY130 Charge Pump Schematic Netlist
+* Two-stage Pelliconi cross-coupled charge pump
+* Exact topology taken from design.cir, with fixed values from best_parameters.csv
+* This is a standalone schematic-style SPICE file intended for direct inspection/simulation.
+*
+* Schematic map
+*   SUPPLY/CLOCKS:
+*     VDD -> clk1/clk2
+*
+*   STAGE 1 (VDD -> MID):
+*     clk1 -- C1A -- a1 --+-- XMN1/XMN2 -- vdd
+*                         |
+*                         +-- XMP1/XMP2 -- mid
+*                         |
+*     clk2 -- C1B -- b1 --+
+*
+*   INTERSTAGE STORAGE:
+*     mid -- CMID -- 0
+*
+*   STAGE 2 (MID -> VOUT):
+*     clk1 -- C2A -- a2 --+-- XMN3/XMN4 -- mid
+*                         |
+*                         +-- XMP3/XMP4 -- vout
+*                         |
+*     clk2 -- C2B -- b2 --+
+*
+*   OUTPUT:
+*     vout -- COUT -- 0
+*     vout -- RLOAD -- 0
+
+.lib "sky130_models/sky130.lib.spice" tt
+
+* ============================================================================
+* FIXED OPTIMIZED VALUES
+* ============================================================================
+.param vdd_val = 1.8
+.param freq_mhz = 59.999999999999986
+.param tper = '1e-6/freq_mhz'
+.param thalf = 'tper/2'
+.param trise = 'tper/50'
+
+.param Wn1 = 73.75056920676282u
+.param Ln1 = 0.5911481662314851u
+.param Wp1 = 88.41317999622052u
+.param Lp1 = 0.5u
+
+.param Wn2 = 85.0018156832435u
+.param Ln2 = 0.5u
+.param Wp2 = 94.93489614174223u
+.param Lp2 = 0.5u
+
+.param Cfly1 = 135.20482984767986p
+.param Cfly2 = 125.24222563347095p
+.param Cmid = 14.16998532660793p
+.param Cout = 285.47418624237395p
+.param Rload = 2937.327203483129
+
+* ============================================================================
+* SUPPLY + CLOCK GENERATION
+* ============================================================================
+VDD_SRC vdd 0 {vdd_val}
+VSS_SRC vss 0 0
+
+* Complementary two-phase clocks, same definition as design.cir
+VCLK1 clk1 0 PULSE(0 {vdd_val} 0 'trise' 'trise' 'thalf-trise' 'tper')
+VCLK2 clk2 0 PULSE(0 {vdd_val} 'thalf' 'trise' 'trise' 'thalf-trise' 'tper')
+
+* ============================================================================
+* STAGE 1 -- PELLICONI CELL (VDD -> MID)
+* ============================================================================
+* Cross-coupled NMOS pair: bootstrap charge from vdd into the flying nodes.
+XMN1 a1 b1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn1} L={Ln1} nf=1
+XMN2 b1 a1 vdd 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn1} L={Ln1} nf=1
+
+* Cross-coupled PMOS pair: transfer boosted charge into the interstage node.
+XMP1 mid b1 a1 mid sky130_fd_pr__pfet_g5v0d10v5 W={Wp1} L={Lp1} nf=1
+XMP2 mid a1 b1 mid sky130_fd_pr__pfet_g5v0d10v5 W={Wp1} L={Lp1} nf=1
+
+* Flying capacitors for stage 1.
+C1A a1 clk1 {Cfly1}
+C1B b1 clk2 {Cfly1}
+
+* Small reservoir capacitor on the interstage node.
+CMID mid 0 {Cmid}
+
+* ============================================================================
+* STAGE 2 -- PELLICONI CELL (MID -> VOUT)
+* ============================================================================
+XMN3 a2 b2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn2} L={Ln2} nf=1
+XMN4 b2 a2 mid 0 sky130_fd_pr__nfet_g5v0d10v5 W={Wn2} L={Ln2} nf=1
+
+XMP3 vout b2 a2 vout sky130_fd_pr__pfet_g5v0d10v5 W={Wp2} L={Lp2} nf=1
+XMP4 vout a2 b2 vout sky130_fd_pr__pfet_g5v0d10v5 W={Wp2} L={Lp2} nf=1
+
+* Flying capacitors for stage 2.
+C2A a2 clk1 {Cfly2}
+C2B b2 clk2 {Cfly2}
+
+* ============================================================================
+* OUTPUT NETWORK
+* ============================================================================
+COUT vout 0 {Cout}
+RLOAD vout 0 {Rload}
+
+* ============================================================================
+* SIMULATION SETUP
+* ============================================================================
+.options reltol=0.01 method=gear maxord=2
+.save v(vdd) v(clk1) v(clk2) v(a1) v(b1) v(mid) v(a2) v(b2) v(vout)
+.tran 2n 25u uic
+.print tran v(vout) v(mid)
+
+.end

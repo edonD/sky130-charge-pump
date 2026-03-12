@@ -1,0 +1,282 @@
+Warning: m=xx on .subckt line will override multiplier m hierarchy!
+
+
+Note: Compatibility modes selected: hs a
+
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  2.09455e-06 Reference value :  4.13382e-06 Reference value :  5.99201e-06 Reference value :  7.51700e-06 Reference value :  8.87536e-06 Reference value :  1.02084e-05 Reference value :  1.13000e-05 Reference value :  1.24256e-05 Reference value :  1.36088e-05 Reference value :  1.45420e-05 Reference value :  1.56112e-05 Reference value :  1.65919e-05 Reference value :  1.75923e-05 Reference value :  1.86253e-05 Reference value :  1.97171e-05 Reference value :  2.07006e-05 Reference value :  2.17590e-05 Reference value :  2.28337e-05 Reference value :  2.37349e-05 Reference value :  2.44585e-05
+No. of Data Rows : 48017
+vout_avg            =  2.097585e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -7.453651e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -7.372371e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -7.372371e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=500 vout=2.09759 iout=0.00419517 eff=39.6413
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  1.42068e-07 Reference value :  3.33667e-07 Reference value :  8.76556e-07 Reference value :  1.02519e-06 Reference value :  1.05867e-06 Reference value :  1.07510e-06 Reference value :  1.08337e-06 Reference value :  1.23333e-06 Reference value :  1.44170e-06 Reference value :  1.61686e-06 Reference value :  1.81701e-06 Reference value :  2.34201e-06 Reference value :  3.13343e-06 Reference value :  4.10837e-06 Reference value :  5.05063e-06 Reference value :  5.83175e-06 Reference value :  6.27510e-06 Reference value :  6.82654e-06 Reference value :  6.97534e-06 Reference value :  7.17563e-06 Reference value :  7.56700e-06 Reference value :  8.03333e-06 Reference value :  8.70033e-06 Reference value :  9.16108e-06 Reference value :  9.36670e-06 Reference value :  9.64008e-06 Reference value :  9.87529e-06 Reference value :  1.04421e-05 Reference value :  1.07926e-05 Reference value :  1.12817e-05 Reference value :  1.17834e-05 Reference value :  1.25464e-05 Reference value :  1.30671e-05 Reference value :  1.35151e-05 Reference value :  1.38256e-05 Reference value :  1.45583e-05 Reference value :  1.47586e-05 Reference value :  1.48420e-05 Reference value :  1.49464e-05 Reference value :  1.53234e-05 Reference value :  1.57843e-05 Reference value :  1.59920e-05 Reference value :  1.63837e-05 Reference value :  1.67349e-05 Reference value :  1.69500e-05 Reference value :  1.72253e-05 Reference value :  1.76682e-05 Reference value :  1.81253e-05 Reference value :  1.85584e-05 Reference value :  1.89259e-05 Reference value :  1.92567e-05 Reference value :  1.93919e-05 Reference value :  1.95587e-05 Reference value :  1.96920e-05 Reference value :  1.97252e-05 Reference value :  1.99401e-05 Reference value :  2.01833e-05 Reference value :  2.03670e-05 Reference value :  2.03753e-05 Reference value :  2.03837e-05 Reference value :  2.03918e-05 Reference value :  2.03984e-05 Reference value :  2.04837e-05 Reference value :  2.05840e-05 Reference value :  2.09682e-05 Reference value :  2.14088e-05 Reference value :  2.14170e-05 Reference value :  2.14170e-05 Reference value :  2.14171e-05 Reference value :  2.14254e-05 Reference value :  2.14343e-05 Reference value :  2.15252e-05 Reference value :  2.18317e-05 Reference value :  2.22484e-05 Reference value :  2.25587e-05 Reference value :  2.27843e-05 Reference value :  2.32426e-05 Reference value :  2.36926e-05 Reference value :  2.38585e-05 Reference value :  2.38588e-05 Reference value :  2.38670e-05 Reference value :  2.39755e-05 Reference value :  2.39817e-05 Reference value :  2.39836e-05 Reference value :  2.39840e-05 Reference value :  2.39917e-05 Reference value :  2.39921e-05 Reference value :  2.39932e-05 Reference value :  2.40002e-05 Reference value :  2.40182e-05 Reference value :  2.41093e-05 Reference value :  2.43003e-05 Reference value :  2.43920e-05 Reference value :  2.44849e-05 Reference value :  2.45170e-05 Reference value :  2.47417e-05
+No. of Data Rows : 48011
+vout_avg            =  2.578334e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -6.552259e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -6.523780e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -6.523780e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=700 vout=2.57833 iout=0.00368333 eff=48.4538
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  2.50343e-07 Reference value :  3.25628e-07 Reference value :  3.33676e-07 Reference value :  5.42000e-07 Reference value :  6.25362e-07 Reference value :  6.25634e-07 Reference value :  6.27808e-07 Reference value :  6.33333e-07 Reference value :  7.25480e-07 Reference value :  9.83696e-07 Reference value :  1.37657e-06 Reference value :  1.39167e-06 Reference value :  1.39201e-06 Reference value :  1.52781e-06 Reference value :  1.53367e-06 Reference value :  1.57548e-06 Reference value :  1.65000e-06 Reference value :  2.06686e-06 Reference value :  2.24177e-06 Reference value :  2.27510e-06 Reference value :  2.49648e-06 Reference value :  2.72595e-06 Reference value :  3.74648e-06 Reference value :  4.58352e-06 Reference value :  5.38368e-06 Reference value :  6.13381e-06 Reference value :  6.68615e-06 Reference value :  6.91823e-06 Reference value :  7.34323e-06 Reference value :  7.91515e-06 Reference value :  8.15833e-06 Reference value :  8.57519e-06 Reference value :  8.98373e-06 Reference value :  9.60481e-06 Reference value :  1.01861e-05 Reference value :  1.04901e-05 Reference value :  1.09651e-05 Reference value :  1.15837e-05 Reference value :  1.22500e-05 Reference value :  1.26167e-05 Reference value :  1.31087e-05 Reference value :  1.35169e-05 Reference value :  1.40003e-05 Reference value :  1.44251e-05 Reference value :  1.47965e-05 Reference value :  1.53420e-05 Reference value :  1.57837e-05 Reference value :  1.61334e-05 Reference value :  1.66587e-05 Reference value :  1.72919e-05 Reference value :  1.77088e-05 Reference value :  1.80251e-05 Reference value :  1.83173e-05 Reference value :  1.84259e-05 Reference value :  1.84340e-05 Reference value :  1.84843e-05 Reference value :  1.84919e-05 Reference value :  1.85169e-05 Reference value :  1.86923e-05 Reference value :  1.89337e-05 Reference value :  1.93506e-05 Reference value :  1.98003e-05 Reference value :  2.02919e-05 Reference value :  2.05335e-05 Reference value :  2.07584e-05 Reference value :  2.12195e-05 Reference value :  2.16003e-05 Reference value :  2.20631e-05 Reference value :  2.25111e-05 Reference value :  2.31651e-05 Reference value :  2.33919e-05 Reference value :  2.37333e-05 Reference value :  2.41418e-05 Reference value :  2.45503e-05
+No. of Data Rows : 48011
+vout_avg            =  3.127163e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -5.571690e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -5.569942e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -5.569942e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=1000 vout=3.12716 iout=0.00312716 eff=58.5172
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  9.01632e-08 Reference value :  9.18424e-08 Reference value :  9.20000e-08 Reference value :  9.20295e-08 Reference value :  9.21477e-08 Reference value :  9.26203e-08 Reference value :  9.32505e-08 Reference value :  9.45108e-08 Reference value :  9.65108e-08 Reference value :  1.00033e-07 Reference value :  1.00176e-07 Reference value :  1.00333e-07 Reference value :  1.00954e-07 Reference value :  1.06846e-07 Reference value :  1.09914e-07 Reference value :  2.16844e-07 Reference value :  2.33695e-07 Reference value :  2.41844e-07 Reference value :  5.92066e-07 Reference value :  1.01726e-06 Reference value :  1.11670e-06 Reference value :  1.40036e-06 Reference value :  1.55967e-06 Reference value :  1.61709e-06 Reference value :  1.76681e-06 Reference value :  1.95852e-06 Reference value :  1.98508e-06 Reference value :  2.32510e-06 Reference value :  2.48765e-06 Reference value :  2.68324e-06 Reference value :  2.82498e-06 Reference value :  3.25834e-06 Reference value :  3.37500e-06 Reference value :  3.81703e-06 Reference value :  3.87534e-06 Reference value :  3.91700e-06 Reference value :  3.95010e-06 Reference value :  4.05004e-06 Reference value :  4.09171e-06 Reference value :  4.32935e-06 Reference value :  4.49984e-06 Reference value :  4.90019e-06 Reference value :  5.34167e-06 Reference value :  5.75420e-06 Reference value :  6.24170e-06 Reference value :  6.55917e-06 Reference value :  7.18512e-06 Reference value :  7.72501e-06 Reference value :  8.31668e-06 Reference value :  8.91677e-06 Reference value :  9.20001e-06 Reference value :  9.48467e-06 Reference value :  9.82559e-06 Reference value :  1.01210e-05 Reference value :  1.02008e-05 Reference value :  1.03430e-05 Reference value :  1.04837e-05 Reference value :  1.05126e-05 Reference value :  1.05754e-05 Reference value :  1.09089e-05 Reference value :  1.13420e-05 Reference value :  1.14334e-05 Reference value :  1.14377e-05 Reference value :  1.16189e-05 Reference value :  1.16794e-05 Reference value :  1.17084e-05 Reference value :  1.17503e-05 Reference value :  1.18169e-05 Reference value :  1.19169e-05 Reference value :  1.19337e-05 Reference value :  1.19750e-05 Reference value :  1.20754e-05 Reference value :  1.22180e-05 Reference value :  1.24083e-05 Reference value :  1.25833e-05 Reference value :  1.27273e-05 Reference value :  1.29504e-05 Reference value :  1.30334e-05 Reference value :  1.33170e-05 Reference value :  1.34834e-05 Reference value :  1.35250e-05 Reference value :  1.37417e-05 Reference value :  1.40837e-05 Reference value :  1.48752e-05 Reference value :  1.52671e-05 Reference value :  1.54584e-05 Reference value :  1.55754e-05 Reference value :  1.57690e-05 Reference value :  1.58695e-05 Reference value :  1.59502e-05 Reference value :  1.64835e-05 Reference value :  1.69000e-05 Reference value :  1.70083e-05 Reference value :  1.70427e-05 Reference value :  1.70508e-05 Reference value :  1.70584e-05 Reference value :  1.70837e-05 Reference value :  1.72043e-05 Reference value :  1.73173e-05 Reference value :  1.75917e-05 Reference value :  1.77764e-05 Reference value :  1.86336e-05 Reference value :  2.00351e-05 Reference value :  2.13419e-05 Reference value :  2.26584e-05 Reference value :  2.42170e-05
+No. of Data Rows : 53409
+vout_avg            =  3.642122e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -4.636322e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -4.643752e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -4.642083e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=1400 vout=3.64212 iout=0.00260152 eff=68.0573
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  2.09687e-07 Reference value :  1.31711e-06 Reference value :  2.43365e-06 Reference value :  3.10843e-06 Reference value :  3.56700e-06 Reference value :  3.82500e-06 Reference value :  4.21159e-06 Reference value :  4.77538e-06 Reference value :  5.48385e-06 Reference value :  5.85871e-06 Reference value :  6.35837e-06 Reference value :  6.69493e-06 Reference value :  7.17521e-06 Reference value :  7.68659e-06 Reference value :  8.07521e-06 Reference value :  8.13354e-06 Reference value :  8.28343e-06 Reference value :  8.30032e-06 Reference value :  8.40180e-06 Reference value :  8.49493e-06 Reference value :  8.91667e-06 Reference value :  9.36701e-06 Reference value :  9.65010e-06 Reference value :  9.70021e-06 Reference value :  9.85043e-06 Reference value :  1.02406e-05 Reference value :  1.03667e-05 Reference value :  1.03670e-05 Reference value :  1.03670e-05 Reference value :  1.03803e-05 Reference value :  1.03834e-05 Reference value :  1.04501e-05 Reference value :  1.04924e-05 Reference value :  1.05167e-05 Reference value :  1.05386e-05 Reference value :  1.07340e-05 Reference value :  1.08920e-05 Reference value :  1.08969e-05 Reference value :  1.09087e-05 Reference value :  1.09420e-05 Reference value :  1.09500e-05 Reference value :  1.10053e-05 Reference value :  1.10116e-05 Reference value :  1.10167e-05 Reference value :  1.10170e-05 Reference value :  1.10250e-05 Reference value :  1.10587e-05 Reference value :  1.10837e-05 Reference value :  1.12417e-05 Reference value :  1.13505e-05 Reference value :  1.13533e-05 Reference value :  1.15337e-05 Reference value :  1.18616e-05 Reference value :  1.21417e-05 Reference value :  1.24920e-05 Reference value :  1.27935e-05 Reference value :  1.32719e-05 Reference value :  1.35337e-05 Reference value :  1.38670e-05 Reference value :  1.42699e-05 Reference value :  1.47601e-05 Reference value :  1.48587e-05 Reference value :  1.48751e-05 Reference value :  1.48949e-05 Reference value :  1.49156e-05 Reference value :  1.49254e-05 Reference value :  1.49616e-05 Reference value :  1.49755e-05 Reference value :  1.49917e-05 Reference value :  1.50250e-05 Reference value :  1.50253e-05 Reference value :  1.51253e-05 Reference value :  1.53670e-05 Reference value :  1.57754e-05 Reference value :  1.59906e-05 Reference value :  1.60837e-05 Reference value :  1.61003e-05 Reference value :  1.61502e-05 Reference value :  1.63750e-05 Reference value :  1.67927e-05 Reference value :  1.72656e-05 Reference value :  1.75585e-05 Reference value :  1.79699e-05 Reference value :  1.84594e-05 Reference value :  1.91087e-05 Reference value :  1.93672e-05 Reference value :  1.99844e-05 Reference value :  2.07116e-05 Reference value :  2.12333e-05 Reference value :  2.19837e-05 Reference value :  2.28250e-05 Reference value :  2.33669e-05 Reference value :  2.42261e-05
+No. of Data Rows : 50987
+vout_avg            =  4.106001e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -3.667901e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -3.675187e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -3.675187e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=2000 vout=4.106 iout=0.002053 eff=76.5058
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  1.44177e-06 Reference value :  2.22364e-06 Reference value :  3.90871e-06 Reference value :  5.04332e-06 Reference value :  5.89170e-06 Reference value :  7.04210e-06 Reference value :  9.04190e-06 Reference value :  1.15004e-05 Reference value :  1.39236e-05 Reference value :  1.75334e-05 Reference value :  2.06419e-05 Reference value :  2.32254e-05
+No. of Data Rows : 45238
+vout_avg            =  4.343267e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -3.102546e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -3.112001e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -3.112001e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=2500 vout=4.34327 iout=0.00173731 eff=80.9044
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  1.95010e-06 Reference value :  4.74177e-06 Reference value :  7.46134e-06 Reference value :  9.65884e-06 Reference value :  1.17613e-05 Reference value :  1.42671e-05 Reference value :  1.60757e-05 Reference value :  1.87863e-05 Reference value :  2.04593e-05 Reference value :  2.12260e-05 Reference value :  2.33843e-05
+No. of Data Rows : 45197
+vout_avg            =  4.506938e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -2.684569e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -2.693774e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -2.693774e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=3000 vout=4.50694 iout=0.00150231 eff=83.8792
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  2.80051e-06 Reference value :  6.81701e-06 Reference value :  1.08833e-05 Reference value :  1.49917e-05 Reference value :  1.93086e-05 Reference value :  2.38254e-05
+No. of Data Rows : 45178
+vout_avg            =  4.626495e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -2.363414e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -2.372621e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -2.372621e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=3500 vout=4.6265 iout=0.00132186 eff=86.0297
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  1.18218e-06 Reference value :  5.50868e-06 Reference value :  9.71739e-06 Reference value :  1.40751e-05 Reference value :  1.88000e-05 Reference value :  2.34004e-05
+No. of Data Rows : 45174
+vout_avg            =  4.717537e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -2.109698e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -2.119466e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -2.119466e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=4000 vout=4.71754 iout=0.00117938 eff=87.6376
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  4.75343e-07 Reference value :  3.60801e-06 Reference value :  7.95867e-06 Reference value :  1.21168e-05 Reference value :  1.66588e-05 Reference value :  2.10688e-05
+No. of Data Rows : 45163
+vout_avg            =  4.846929e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -1.735145e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -1.746153e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -1.746153e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=5000 vout=4.84693 iout=0.000969386 eff=89.8821
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  4.16690e-06 Reference value :  7.63416e-06 Reference value :  1.15342e-05 Reference value :  1.62043e-05 Reference value :  2.05087e-05 Reference value :  2.47960e-05
+No. of Data Rows : 42646
+vout_avg            =  4.934275e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -1.472701e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -1.484720e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -1.484720e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=6000 vout=4.93427 iout=0.000822379 eff=91.3489
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  2.02500e-06 Reference value :  6.27598e-06 Reference value :  1.02585e-05 Reference value :  1.46153e-05 Reference value :  1.86433e-05 Reference value :  2.30423e-05
+No. of Data Rows : 46663
+vout_avg            =  5.044392e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -1.130142e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -1.136361e-03 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -1.144591e-03 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=8000 vout=5.04439 iout=0.000630549 eff=93.2468
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  2.16856e-07 Reference value :  4.63333e-06 Reference value :  8.77079e-06 Reference value :  1.31838e-05 Reference value :  1.75008e-05 Reference value :  2.19002e-05
+No. of Data Rows : 45207
+vout_avg            =  5.111076e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -9.177883e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -9.304807e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -9.308765e-04 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=10000 vout=5.11108 iout=0.000511108 eff=93.9969
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  4.37578e-06 Reference value :  8.59969e-06 Reference value :  1.29087e-05 Reference value :  1.73500e-05 Reference value :  2.15000e-05
+No. of Data Rows : 45159
+vout_avg            =  5.187361e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -6.668721e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -6.801097e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -6.801097e-04 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=14000 vout=5.18736 iout=0.000370526 eff=94.8182
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  4.40868e-06 Reference value :  8.60123e-06 Reference value :  1.29123e-05 Reference value :  1.68089e-05 Reference value :  2.09123e-05 Reference value :  2.45674e-05
+No. of Data Rows : 45147
+vout_avg            =  5.245100e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -4.735084e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -4.872261e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -4.872261e-04 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=20000 vout=5.2451 iout=0.000262255 eff=94.9994
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  1.80868e-06 Reference value :  6.11045e-06 Reference value :  1.06753e-05 Reference value :  1.37834e-05 Reference value :  1.58584e-05 Reference value :  1.71938e-05 Reference value :  1.80289e-05 Reference value :  1.86521e-05 Reference value :  1.90253e-05 Reference value :  2.01503e-05 Reference value :  2.27595e-05
+No. of Data Rows : 45140
+vout_avg            =  5.290189e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -3.199985e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -3.341530e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -3.341530e-04 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=30000 vout=5.29019 iout=0.00017634 eff=94.3909
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using SPARSE 1.3 as Direct Linear Solver
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  3.33333e-12 Reference value :  3.18720e-06 Reference value :  5.13333e-06 Reference value :  8.30871e-06 Reference value :  1.22679e-05 Reference value :  1.58595e-05 Reference value :  1.83762e-05 Reference value :  2.17169e-05
+No. of Data Rows : 45136
+vout_avg            =  5.326370e+00 from=  2.000000e-05 to=  2.500000e-05
+avg_pvdd            =  -1.952156e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk1           =  -2.097615e-04 from=  2.000000e-05 to=  2.500000e-05
+avg_pclk2           =  -2.097615e-04 from=  2.000000e-05 to=  2.500000e-05
+SWEEP_POINT rval=50000 vout=5.32637 iout=0.000106527 eff=92.3001
+Reset re-loads circuit * sky130 2-stage cross-coupled charge pump — load sweep
+
+Circuit: * sky130 2-stage cross-coupled charge pump — load sweep
+
+SIM_DONE
+Note: Simulation executed from .control section 

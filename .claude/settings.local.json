@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout:*)",
+      "Bash(which ngspice:*)",
+      "Bash(python -c \"import matplotlib; print\\(matplotlib.__version__\\)\" 2>/dev/null || python3 -c \"import matplotlib; print\\(matplotlib.__version__\\)\" 2>/dev/null || echo \"no matplotlib\")",
+      "Bash(ngspice -b sims/sim_startup.cir 2>&1 | tail -20)",
+      "Bash(ngspice -b sims/sim_ripple.cir 2>&1 | tail -20)",
+      "Bash(ngspice -b sims/sim_loadsweep.cir 2>&1 | tee sims/loadsweep_output.txt | tail -40)",
+      "Bash(git ls-tree:*)",
+      "Bash(git submodule:*)",
+      "Bash(rm -rf sky130_models && git clone https://github.com/mkghub/skywater130_fd_pr_models.git sky130_models 2>&1 | tail -5)",
+      "Bash(ls sky130_models/*.spice 2>/dev/null | head -10)",
+      "Bash(cd /c/Users/derguti/sky130-charge-pump && ngspice -b sims/sim_startup.cir 2>&1 | tail -5)",
+      "Bash(cd /c/Users/derguti/sky130-charge-pump && ngspice -b sims/sim_ripple.cir 2>&1 | tail -5)",
+      "Bash(cd /c/Users/derguti/sky130-charge-pump && ngspice -b sims/sim_loadsweep.cir 2>&1 | tee sims/loadsweep_output.txt | tail -5)",
+      "Bash(cp -r sky130_models/r+c sky130_models/sky130_fd_pr_models/ && cp -r sky130_models/file_tree sky130_models/sky130_fd_pr_models/ 2>/dev/null; echo \"copied\" && ls sky130_models/sky130_fd_pr_models/r+c/ | head -3)",
+      "Bash(cp -r sky130_models/sky130_fd_pr_models sky130_fd_pr_models && echo \"copied fd_pr_models to root\" && ls sky130_fd_pr_models/ | head -5)",
+      "Bash(ngspice -b sims/sim_startup.cir 2>&1 | tail -10)",
+      "Bash(head -1 sims/data_startup.csv | awk '{print NF}')"
+    ]
+  }
+}

@@ -1,0 +1,323 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1100" font-family="'SF Mono','Cascadia Code','Fira Code','Consolas',monospace">
+<defs>
+  <g id="PL" stroke="#c8c8c8" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <line x1="0" y1="40" x2="13" y2="40"/>
+    <circle cx="16" cy="40" r="3" fill="#0d0d0d" stroke="#c8c8c8" stroke-width="1.5"/>
+    <line x1="19" y1="16" x2="19" y2="64"/>
+    <line x1="23" y1="14" x2="23" y2="25"/>
+    <line x1="23" y1="29" x2="23" y2="51"/>
+    <line x1="23" y1="55" x2="23" y2="66"/>
+    <line x1="23" y1="20" x2="56" y2="20"/>
+    <line x1="56" y1="0" x2="56" y2="20"/>
+    <line x1="23" y1="60" x2="56" y2="60"/>
+    <line x1="56" y1="60" x2="56" y2="80"/>
+    <line x1="56" y1="20" x2="56" y2="40"/>
+    <line x1="23" y1="40" x2="56" y2="40"/>
+    <polygon points="33,40 39,36 39,44" fill="#c8c8c8" stroke="none"/>
+  </g>
+  <g id="PR" stroke="#c8c8c8" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <line x1="56" y1="40" x2="43" y2="40"/>
+    <circle cx="40" cy="40" r="3" fill="#0d0d0d" stroke="#c8c8c8" stroke-width="1.5"/>
+    <line x1="37" y1="16" x2="37" y2="64"/>
+    <line x1="33" y1="14" x2="33" y2="25"/>
+    <line x1="33" y1="29" x2="33" y2="51"/>
+    <line x1="33" y1="55" x2="33" y2="66"/>
+    <line x1="33" y1="20" x2="0" y2="20"/>
+    <line x1="0" y1="0" x2="0" y2="20"/>
+    <line x1="33" y1="60" x2="0" y2="60"/>
+    <line x1="0" y1="60" x2="0" y2="80"/>
+    <line x1="0" y1="20" x2="0" y2="40"/>
+    <line x1="33" y1="40" x2="0" y2="40"/>
+    <polygon points="23,40 17,36 17,44" fill="#c8c8c8" stroke="none"/>
+  </g>
+  <g id="NL" stroke="#c8c8c8" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <line x1="0" y1="40" x2="19" y2="40"/>
+    <line x1="19" y1="16" x2="19" y2="64"/>
+    <line x1="23" y1="14" x2="23" y2="25"/>
+    <line x1="23" y1="29" x2="23" y2="51"/>
+    <line x1="23" y1="55" x2="23" y2="66"/>
+    <line x1="23" y1="20" x2="56" y2="20"/>
+    <line x1="56" y1="0" x2="56" y2="20"/>
+    <line x1="23" y1="60" x2="56" y2="60"/>
+    <line x1="56" y1="60" x2="56" y2="80"/>
+    <line x1="56" y1="60" x2="56" y2="40"/>
+    <line x1="23" y1="40" x2="56" y2="40"/>
+    <polygon points="47,40 41,36 41,44" fill="#c8c8c8" stroke="none"/>
+  </g>
+  <g id="NR" stroke="#c8c8c8" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <line x1="56" y1="40" x2="37" y2="40"/>
+    <line x1="37" y1="16" x2="37" y2="64"/>
+    <line x1="33" y1="14" x2="33" y2="25"/>
+    <line x1="33" y1="29" x2="33" y2="51"/>
+    <line x1="33" y1="55" x2="33" y2="66"/>
+    <line x1="33" y1="20" x2="0" y2="20"/>
+    <line x1="0" y1="0" x2="0" y2="20"/>
+    <line x1="33" y1="60" x2="0" y2="60"/>
+    <line x1="0" y1="60" x2="0" y2="80"/>
+    <line x1="0" y1="60" x2="0" y2="40"/>
+    <line x1="33" y1="40" x2="0" y2="40"/>
+    <polygon points="9,40 15,36 15,44" fill="#c8c8c8" stroke="none"/>
+  </g>
+  <g id="VDD" stroke="#c8c8c8" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="-8"/>
+    <line x1="-9" y1="-8" x2="9" y2="-8" stroke-width="2"/>
+  </g>
+  <g id="GND" stroke="#c8c8c8" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="7"/>
+    <line x1="-9" y1="7" x2="9" y2="7"/>
+    <line x1="-5.5" y1="12" x2="5.5" y2="12" stroke-width="1.4"/>
+    <line x1="-2.5" y1="17" x2="2.5" y2="17" stroke-width="1"/>
+  </g>
+  <g id="CAPH" stroke="#c8c8c8" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <line x1="0" y1="0" x2="16" y2="0"/>
+    <line x1="16" y1="-12" x2="16" y2="12" stroke-width="2.2"/>
+    <line x1="24" y1="-12" x2="24" y2="12" stroke-width="2.2"/>
+    <line x1="24" y1="0" x2="44" y2="0"/>
+  </g>
+  <g id="CAPV" stroke="#c8c8c8" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <line x1="0" y1="0" x2="0" y2="16"/>
+    <line x1="-12" y1="16" x2="12" y2="16" stroke-width="2.2"/>
+    <line x1="-12" y1="24" x2="12" y2="24" stroke-width="2.2"/>
+    <line x1="0" y1="24" x2="0" y2="44"/>
+  </g>
+  <g id="CLK" stroke="#c8c8c8" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="0" y="0" width="86" height="46" rx="5" fill="#141414" stroke="#c8c8c8" stroke-width="1.2"/>
+    <polyline points="14,30 14,16 32,16 32,30 50,30 50,16 68,16 68,30"/>
+  </g>
+</defs>
+<style>
+  .w{stroke:#c8c8c8;stroke-width:1.5;fill:none;stroke-linecap:round}
+  .wd{stroke:#666;stroke-width:1.2;fill:none;stroke-dasharray:5,3}
+  .dot{fill:#c8c8c8}
+  .lb{font-size:14px;font-weight:700;fill:#fff}
+  .ls{font-size:10px;fill:#888}
+  .ln{font-size:11px;font-weight:600;fill:#999}
+  .lv{font-size:10px;font-weight:600;fill:#888}
+  .hdr{font-size:12px;font-weight:700;fill:#666}
+  .note{font-size:11px;fill:#aaa}
+  .box{fill:#141414;stroke:#333;stroke-width:1}
+  .panel{fill:none;stroke:#2a2a2a;stroke-width:1;stroke-dasharray:4,2}
+</style>
+
+<rect width="1700" height="1100" fill="#0d0d0d"/>
+
+<!-- Title -->
+<text x="850" y="30" text-anchor="middle" font-size="20" font-weight="800" fill="#fff" letter-spacing="1">SKY130 Two-Stage Pelliconi Charge Pump</text>
+<text x="850" y="48" text-anchor="middle" font-size="11" fill="#555" letter-spacing="0.3">Exact topology from design.cir | 1.8V supply | 60MHz complementary clocks</text>
+
+<!-- Panels -->
+<rect x="70" y="80" width="300" height="430" rx="8" class="panel"/>
+<text x="88" y="102" class="hdr">SUPPLY / CLOCKS</text>
+
+<rect x="420" y="100" width="440" height="350" rx="8" class="panel"/>
+<text x="438" y="122" class="hdr">STAGE 1 -- CROSS-COUPLED CELL (VDD -> MID)</text>
+
+<rect x="420" y="500" width="440" height="390" rx="8" class="panel"/>
+<text x="438" y="522" class="hdr">STAGE 2 -- CROSS-COUPLED CELL (MID -> VOUT)</text>
+
+<rect x="900" y="500" width="300" height="390" rx="8" class="panel"/>
+<text x="918" y="522" class="hdr">OUTPUT / LOAD</text>
+
+<rect x="1230" y="80" width="390" height="340" rx="8" class="panel"/>
+<text x="1248" y="102" class="hdr">RESULTS</text>
+
+<!-- Supply panel -->
+<use href="#VDD" x="150" y="158"/>
+<text x="170" y="152" class="lb">VDD_SRC</text>
+<text x="170" y="167" class="ls">vdd = 1.8V</text>
+<line x1="150" y1="158" x2="150" y2="196" class="w"/>
+<use href="#GND" x="150" y="196"/>
+<text x="170" y="220" class="ls">0V reference</text>
+
+<g transform="translate(110,300)">
+  <use href="#CLK" x="0" y="0"/>
+  <text x="100" y="17" class="lb">VCLK1</text>
+  <text x="100" y="31" class="ls">clk1</text>
+  <text x="100" y="45" class="ls">PULSE(0, 1.8, phase 0)</text>
+</g>
+
+<g transform="translate(110,390)">
+  <use href="#CLK" x="0" y="0"/>
+  <text x="100" y="17" class="lb">VCLK2</text>
+  <text x="100" y="31" class="ls">clk2</text>
+  <text x="100" y="45" class="ls">PULSE(0, 1.8, phase 180 deg)</text>
+</g>
+
+<!-- Stage 1 buses -->
+<line x1="520" y1="160" x2="740" y2="160" class="w"/>
+<use href="#VDD" x="630" y="160"/>
+<text x="642" y="152" class="lv">vdd</text>
+
+<line x1="520" y1="430" x2="740" y2="430" class="w"/>
+<circle cx="630" cy="430" r="3.5" class="dot"/>
+<text x="642" y="424" class="lv">mid</text>
+
+<!-- Stage 1 left branch -->
+<line x1="546" y1="160" x2="546" y2="176" class="w"/>
+<use href="#NL" x="490" y="176"/>
+<line x1="546" y1="256" x2="546" y2="300" class="w"/>
+<circle cx="546" cy="300" r="3.5" class="dot"/>
+<text x="534" y="295" text-anchor="end" class="ln">a1</text>
+
+<line x1="546" y1="300" x2="546" y2="318" class="w"/>
+<use href="#PL" x="490" y="318"/>
+<line x1="546" y1="398" x2="546" y2="430" class="w"/>
+
+<!-- Stage 1 right branch -->
+<line x1="726" y1="160" x2="726" y2="176" class="w"/>
+<use href="#NR" x="726" y="176"/>
+<line x1="726" y1="256" x2="726" y2="300" class="w"/>
+<circle cx="726" cy="300" r="3.5" class="dot"/>
+<text x="738" y="295" class="ln">b1</text>
+
+<line x1="726" y1="300" x2="726" y2="318" class="w"/>
+<use href="#PR" x="726" y="318"/>
+<line x1="726" y1="398" x2="726" y2="430" class="w"/>
+
+<!-- Stage 1 cross-coupled gates -->
+<line x1="726" y1="300" x2="468" y2="300" class="w"/>
+<line x1="468" y1="216" x2="468" y2="358" class="w"/>
+<line x1="468" y1="216" x2="490" y2="216" class="w"/>
+<line x1="468" y1="358" x2="490" y2="358" class="w"/>
+
+<line x1="546" y1="300" x2="804" y2="300" class="w"/>
+<line x1="804" y1="216" x2="804" y2="358" class="w"/>
+<line x1="782" y1="216" x2="804" y2="216" class="w"/>
+<line x1="782" y1="358" x2="804" y2="358" class="w"/>
+
+<!-- Stage 1 flying caps -->
+<use href="#CAPH" x="480" y="300"/>
+<line x1="524" y1="300" x2="546" y2="300" class="w"/>
+<line x1="448" y1="300" x2="480" y2="300" class="w"/>
+<text x="484" y="286" class="ln">C1A</text>
+<text x="448" y="287" text-anchor="end" class="lv">clk1</text>
+<text x="484" y="315" class="ls">135.2pF</text>
+
+<use href="#CAPH" x="726" y="300"/>
+<line x1="770" y1="300" x2="798" y2="300" class="w"/>
+<text x="734" y="286" class="ln">C1B</text>
+<text x="806" y="287" class="lv">clk2</text>
+<text x="734" y="315" class="ls">135.2pF</text>
+
+<!-- Stage 1 labels -->
+<text x="478" y="248" class="lb">XMN1</text>
+<text x="478" y="262" class="ls">73.8u / 0.591u</text>
+<text x="478" y="392" class="lb">XMP1</text>
+<text x="478" y="406" class="ls">88.4u / 0.5u</text>
+
+<text x="744" y="248" class="lb">XMN2</text>
+<text x="744" y="262" class="ls">73.8u / 0.591u</text>
+<text x="744" y="392" class="lb">XMP2</text>
+<text x="744" y="406" class="ls">88.4u / 0.5u</text>
+
+<!-- Interstage trunk + CMID -->
+<line x1="630" y1="430" x2="630" y2="560" class="w"/>
+<circle cx="630" cy="560" r="3.5" class="dot"/>
+<line x1="630" y1="490" x2="780" y2="490" class="w"/>
+<use href="#CAPV" x="780" y="490"/>
+<line x1="780" y1="534" x2="780" y2="548" class="w"/>
+<use href="#GND" x="780" y="548"/>
+<text x="792" y="486" class="ln">CMID</text>
+<text x="792" y="501" class="ls">14.17pF</text>
+
+<!-- Stage 2 buses -->
+<line x1="520" y1="560" x2="740" y2="560" class="w"/>
+<text x="642" y="554" class="lv">mid</text>
+
+<line x1="520" y1="820" x2="900" y2="820" class="w"/>
+<circle cx="630" cy="820" r="3.5" class="dot"/>
+<text x="642" y="814" class="lv">vout</text>
+
+<!-- Stage 2 left branch -->
+<line x1="546" y1="560" x2="546" y2="576" class="w"/>
+<use href="#NL" x="490" y="576"/>
+<line x1="546" y1="656" x2="546" y2="690" class="w"/>
+<circle cx="546" cy="690" r="3.5" class="dot"/>
+<text x="534" y="685" text-anchor="end" class="ln">a2</text>
+
+<line x1="546" y1="690" x2="546" y2="708" class="w"/>
+<use href="#PL" x="490" y="708"/>
+<line x1="546" y1="788" x2="546" y2="820" class="w"/>
+
+<!-- Stage 2 right branch -->
+<line x1="726" y1="560" x2="726" y2="576" class="w"/>
+<use href="#NR" x="726" y="576"/>
+<line x1="726" y1="656" x2="726" y2="690" class="w"/>
+<circle cx="726" cy="690" r="3.5" class="dot"/>
+<text x="738" y="685" class="ln">b2</text>
+
+<line x1="726" y1="690" x2="726" y2="708" class="w"/>
+<use href="#PR" x="726" y="708"/>
+<line x1="726" y1="788" x2="726" y2="820" class="w"/>
+
+<!-- Stage 2 cross-coupled gates -->
+<line x1="726" y1="690" x2="468" y2="690" class="w"/>
+<line x1="468" y1="616" x2="468" y2="748" class="w"/>
+<line x1="468" y1="616" x2="490" y2="616" class="w"/>
+<line x1="468" y1="748" x2="490" y2="748" class="w"/>
+
+<line x1="546" y1="690" x2="804" y2="690" class="w"/>
+<line x1="804" y1="616" x2="804" y2="748" class="w"/>
+<line x1="782" y1="616" x2="804" y2="616" class="w"/>
+<line x1="782" y1="748" x2="804" y2="748" class="w"/>
+
+<!-- Stage 2 flying caps -->
+<use href="#CAPH" x="480" y="690"/>
+<line x1="524" y1="690" x2="546" y2="690" class="w"/>
+<line x1="448" y1="690" x2="480" y2="690" class="w"/>
+<text x="484" y="676" class="ln">C2A</text>
+<text x="448" y="677" text-anchor="end" class="lv">clk1</text>
+<text x="484" y="705" class="ls">125.2pF</text>
+
+<use href="#CAPH" x="726" y="690"/>
+<line x1="770" y1="690" x2="798" y2="690" class="w"/>
+<text x="734" y="676" class="ln">C2B</text>
+<text x="806" y="677" class="lv">clk2</text>
+<text x="734" y="705" class="ls">125.2pF</text>
+
+<!-- Stage 2 labels -->
+<text x="478" y="648" class="lb">XMN3</text>
+<text x="478" y="662" class="ls">85.0u / 0.5u</text>
+<text x="478" y="782" class="lb">XMP3</text>
+<text x="478" y="796" class="ls">94.9u / 0.5u</text>
+
+<text x="744" y="648" class="lb">XMN4</text>
+<text x="744" y="662" class="ls">85.0u / 0.5u</text>
+<text x="744" y="782" class="lb">XMP4</text>
+<text x="744" y="796" class="ls">94.9u / 0.5u</text>
+
+<!-- Output panel -->
+<line x1="900" y1="820" x2="1140" y2="820" class="w"/>
+<circle cx="940" cy="820" r="6" fill="#fff"/>
+<text x="958" y="814" font-size="16" fill="#fff" font-weight="800">OUT</text>
+
+<use href="#CAPV" x="1008" y="820"/>
+<line x1="1008" y1="864" x2="1008" y2="878" class="w"/>
+<use href="#GND" x="1008" y="878"/>
+<text x="1024" y="838" class="ln">COUT</text>
+<text x="1024" y="853" class="ls">285.5pF</text>
+
+<line x1="1110" y1="820" x2="1110" y2="840" class="w"/>
+<rect x="1098" y="840" width="24" height="58" rx="3" fill="#0d0d0d" stroke="#c8c8c8" stroke-width="1.3"/>
+<line x1="1110" y1="898" x2="1110" y2="912" class="w"/>
+<use href="#GND" x="1110" y="912"/>
+<text x="1132" y="865" class="ln">RLOAD</text>
+<text x="1132" y="880" class="ls">2.94k</text>
+
+<rect x="928" y="610" width="244" height="120" rx="5" class="box"/>
+<text x="946" y="635" font-size="13" font-weight="700" fill="#ccc">Output Node</text>
+<text x="946" y="658" class="note">Theoretical max ~= 3 x VDD = 5.4V</text>
+<text x="946" y="678" class="note">Measured steady-state VOUT = 4.48984V</text>
+<text x="946" y="698" class="note">Parallel output filter: COUT || RLOAD</text>
+
+<!-- Notes panel: results -->
+<rect x="1255" y="145" width="340" height="210" rx="5" class="box"/>
+<text x="1272" y="170" font-size="13" font-weight="700" fill="#ccc">Measured Result</text>
+<text x="1272" y="197" class="note">VOUT:    4.48984V</text>
+<text x="1272" y="217" class="note">IOUT:    1.52855mA</text>
+<text x="1272" y="237" class="note">EFF:     83.5184%</text>
+<text x="1272" y="257" class="note">RIPPLE:  3.646mVpp</text>
+<text x="1272" y="277" class="note">STARTUP: 0.739185us</text>
+<text x="1272" y="307" class="note">All spec targets pass.</text>
+
+</svg>
