@@ -312,9 +312,9 @@ def run_de(template: str, params: List[Dict], specs: Dict,
 
     n_params = len(params)
     pop_size = max(100, 5 * n_params) if not quick else max(50, 3 * n_params)
-    patience = 15 if not quick else 10
-    min_iter = 15 if not quick else 8
-    max_iter = 60 if not quick else 30
+    patience = 20 if not quick else 10
+    min_iter = 20 if not quick else 8
+    max_iter = 80 if not quick else 30
 
     if not n_workers:
         n_workers = os.cpu_count() or 8
